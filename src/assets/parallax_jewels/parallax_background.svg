@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 22860 22860"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil12 {fill:black}
+    .fil7 {fill:#1A1A1A}
+    .fil5 {fill:white}
+    .fil0 {fill:#F54029}
+    .fil8 {fill:#CF035C}
+    .fil4 {fill:#00B394}
+    .fil6 {fill:white;fill-opacity:0.168627}
+    .fil11 {fill:white;fill-opacity:0.478431}
+    .fil1 {fill:black;fill-opacity:0.501961}
+    .fil3 {fill:#666666;fill-opacity:0.501961}
+    .fil9 {fill:#999999;fill-opacity:0.501961}
+    .fil2 {fill:white;fill-opacity:0.501961}
+    .fil10 {fill:white;fill-opacity:0.701961}
+    .fil13 {fill:url(#id4)}
+    .fil24 {fill:url(#id5);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil25 {fill:url(#id6);fill-opacity:0.5; mix-blend-mode: screen }
+    .fil23 {fill:url(#id7);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil14 {fill:url(#id8);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil16 {fill:url(#id9);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil26 {fill:url(#id10);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil15 {fill:url(#id11);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil22 {fill:url(#id12);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil27 {fill:url(#id13);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil21 {fill:url(#id14);fill-opacity:0.5; mix-blend-mode: screen}
+    .fil19 {fill:url(#id15);0.5; mix-blend-mode: screen}
+    .fil17 {fill:url(#id16);0.5;mix-blend-mode: screen}
+    .fil18 {fill:url(#id17);0.5; mix-blend-mode: screen}
+    .fil20 {fill:url(#id18);0.5; mix-blend-mode: screen}
+   ]]>
+  </style>
+  <mask id="id0">
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="9622.54" y1="9570.03" x2="12039.1" y2="12127.67">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:0; stop-color:white"/>
+  </linearGradient>
+   <rect style="fill:url(#id1)" x="9901.28" y="9958.07" width="2079.29" height="2079.29"/>
+  </mask>
+   <mask id="id2">
+  <radialGradient id="id3" gradientUnits="userSpaceOnUse" cx="3271.24" cy="314.5" r="0" fx="3271.24" fy="314.5">
+   <stop offset="0" style="stop-opacity:0.470588; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:0; stop-color:white"/>
+  </radialGradient>
+    <rect style="fill:url(#id3)" x="3261.24" y="304.5" width="39186.3" height="19799.05"/>
+   </mask>
+  <radialGradient id="id4" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 -0 -0 0.505002 0 5051)" cx="22854.39" cy="10204.03" r="19583.15" fx="22854.39" fy="10204.03">
+   <stop offset="0" style="stop-opacity:1; stop-color:#52A3FF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999996 -0 -0 0.950133 0 793)" cx="3756.75" cy="15898.6" r="880.34" fx="3756.75" fy="15898.6">
+   <stop offset="0" style="stop-opacity:1; stop-color:#52C8FF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id6" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999996 -0 -0 0.950133 0 1000)" xlink:href="#id5" cx="21033.47" cy="20051.36" r="880.34" fx="21033.47" fy="20051.36">
+  </radialGradient>
+  <radialGradient id="id7" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 -0 -0 0.950161 0 584)" xlink:href="#id5" cx="16732.21" cy="11721.01" r="275.49" fx="16732.21" fy="11721.01">
+  </radialGradient>
+  <radialGradient id="id8" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 -0 -0 0.807777 0 2848)" cx="1648.82" cy="14813.8" r="9313.34" fx="1648.82" fy="14813.8">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FFAE00"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id9" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 -0 -0 0.533711 0 7860)" cx="24261.88" cy="16857.17" r="10124.72" fx="24261.88" fy="16857.17">
+   <stop offset="0" style="stop-opacity:1; stop-color:#A600FF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id10" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999997 -0 -0 0.950147 0 715)" xlink:href="#id5" cx="14816.09" cy="14337.63" r="621.83" fx="14816.09" fy="14337.63">
+  </radialGradient>
+  <radialGradient id="id11" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.847744 -0 -0 1 265 0)" cx="1740.28" cy="11430" r="11430" fx="1740.28" fy="11430">
+   <stop offset="0" style="stop-opacity:1; stop-color:blue"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id12" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 -0 -0 0.950144 0 538)" xlink:href="#id5" cx="8398.87" cy="10788.99" r="550.99" fx="8398.87" fy="10788.99">
+  </radialGradient>
+  <radialGradient id="id13" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999997 -0 -0 0.950139 0 437)" cx="10653.61" cy="8754.79" r="1404.53" fx="10653.61" fy="8754.79">
+   <stop offset="0" style="stop-opacity:1; stop-color:#DAFF52"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id14" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 -0 -0 0.950122 0 965)" xlink:href="#id5" cx="12328.18" cy="19355.82" r="248.01" fx="12328.18" fy="19355.82">
+  </radialGradient>
+  <radialGradient id="id15" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999998 -0 -0 0.95014 0 1102)" cx="9965.61" cy="22107.49" r="1797.65" fx="9965.61" fy="22107.49">
+   <stop offset="0" style="stop-opacity:1; stop-color:#52FFC5"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id16" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999999 -0 -0 0.950141 0 979)" xlink:href="#id4" cx="4462.29" cy="19638.04" r="662.11" fx="4462.29" fy="19638.04">
+  </radialGradient>
+  <radialGradient id="id17" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999999 -0 -0 0.950141 0 847)" cx="11491.34" cy="16992.19" r="662.11" fx="11491.34" fy="16992.19">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FF52F1"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+  <radialGradient id="id18" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999998 -0 -0 0.95014 0 1002)" cx="17126.99" cy="20096.66" r="1797.65" fx="17126.99" fy="20096.66">
+   <stop offset="0" style="stop-opacity:1; stop-color:#B152FF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:black"/>
+  </radialGradient>
+ </defs>
+<symbol id="square-jewel" viewBox="10011.84 10011.83 2836.33 2836.33">
+ <rect id="fill" class="fil0" x="10011.84" y="10011.83" width="2836.33" height="2836.33"/>
+ <polygon id="dark" class="fil1" points="11430,11429.99 12848.17,12848.16 10011.84,12848.16 "/>
+ <polygon id="light" class="fil2" points="10011.84,10011.83 11430,11429.99 12848.17,10011.83 "/>
+ <polygon id="dark_0" class="fil3" points="11430,11429.99 10011.84,10011.83 10011.84,12848.16 "/>
+</symbol>
+<symbol id="jewel_circle" viewBox="9503.83 9503.83 3852.34 3852.34">
+ <circle id="fill_1" class="fil4" cx="11430" cy="11430" r="1926.17"/>
+ <path id="shine" class="fil5" style="mask:url(#id0)" d="M10940.93 9968.07c568.65,0 1029.64,460.99 1029.64,1029.65 0,568.65 -460.99,1029.64 -1029.64,1029.64 -568.66,0 -1029.65,-460.99 -1029.65,-1029.64 0,-568.66 460.99,-1029.65 1029.65,-1029.65z"/>
+ <path id="light_2" class="fil6" d="M11430 9503.83c945.62,0 1712.21,766.59 1712.21,1712.21 0,945.62 -766.59,1712.21 -1712.21,1712.21 -945.62,0 -1712.21,-766.59 -1712.21,-1712.21 0,-945.62 766.59,-1712.21 1712.21,-1712.21z"/>
+</symbol>
+<symbol id="shine_3" viewBox="6328.02 6328.02 10203.96 10203.96">
+ <circle id="red_shine" class="fil7" cx="11430" cy="11430" r="5101.98"/>
+</symbol>
+<symbol id="star-jewel" viewBox="6261.45 6261.46 10337.09 10337.09">
+ <path id="fill_4" class="fil8" d="M6261.45 11263.22c2854.51,92.13 5093.88,2480.81 5001.76,5335.33 92.12,-2854.52 2480.82,-5093.87 5335.33,-5001.76 -2854.51,-92.11 -5093.86,-2480.82 -5001.76,-5335.33 -92.1,2854.51 -2480.82,5093.89 -5335.33,5001.76z"/>
+ <path id="dark_5" class="fil3" d="M12756.36 11472.79c-732.53,-23.64 -1345.53,551.04 -1369.16,1283.57l-123.99 3842.19c92.12,-2854.52 2480.82,-5093.87 5335.33,-5001.76l-3842.18 -124z"/>
+ <path id="mid" class="fil9" d="M11472.8 10103.64c-23.64,732.53 551.03,1345.51 1283.56,1369.15l3842.18 124c-2854.51,-92.11 -5093.86,-2480.82 -5001.76,-5335.33l-123.98 3842.18z"/>
+ <path id="light_6" class="fil10" d="M10103.64 11387.2c732.53,23.64 1345.52,-551.03 1369.16,-1283.56l123.98 -3842.18c-92.1,2854.51 -2480.82,5093.89 -5335.33,5001.76l3842.19 123.98z"/>
+ <path id="center" class="fil11" d="M11472.8 10103.64c-23.64,732.53 -636.63,1307.2 -1369.16,1283.56 732.53,23.64 1307.19,636.63 1283.56,1369.16 23.63,-732.53 636.63,-1307.21 1369.16,-1283.57 -732.53,-23.64 -1307.2,-636.62 -1283.56,-1369.15z"/>
+</symbol>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil12" x="-0" y="0" width="22860" height="22860"/>
+  <path class="fil13" style="mask:url(#id2)" d="M22854.39 314.5c10815.44,0 19583.15,4427.7 19583.15,9889.52 0,5461.82 -8767.71,9889.53 -19583.15,9889.53 -10815.44,0 -19583.15,-4427.71 -19583.15,-9889.53 0,-5461.82 8767.71,-9889.52 19583.15,-9889.52z"/>
+  <path class="fil14" d="M1648.82 7290.71c5143.59,0 9313.33,3368.22 9313.33,7523.1 0,4154.87 -4169.74,7523.09 -9313.33,7523.09 -5143.6,0 -9313.34,-3368.22 -9313.34,-7523.09 0,-4154.88 4169.74,-7523.1 9313.34,-7523.1z"/>
+  <path class="fil15" d="M1740.28 0.01c5351.47,0 9689.72,5117.4 9689.72,11429.99 0,6312.6 -4338.25,11430 -9689.72,11430 -5351.47,0 -9689.72,-5117.4 -9689.72,-11430 0,-6312.59 4338.25,-11429.99 9689.72,-11429.99z"/>
+  <path class="fil16" d="M24261.89 11453.5c5591.71,0 10124.71,2419.31 10124.71,5403.67 0,2984.35 -4533,5403.67 -10124.71,5403.67 -5591.71,0 -10124.72,-2419.32 -10124.72,-5403.67 0,-2984.36 4533.01,-5403.67 10124.72,-5403.67z"/>
+  <path class="fil17" d="M4462.29 19008.94c365.67,0 662.11,281.66 662.11,629.1 0,347.44 -296.44,629.1 -662.11,629.1 -365.67,0 -662.11,-281.66 -662.11,-629.1 0,-347.44 296.44,-629.1 662.11,-629.1z"/>
+  <path class="fil18" d="M11491.34 16363.09c365.67,0 662.11,281.66 662.11,629.1 0,347.44 -296.44,629.1 -662.11,629.1 -365.67,0 -662.11,-281.66 -662.11,-629.1 0,-347.44 296.44,-629.1 662.11,-629.1z"/>
+  <path class="fil19" d="M9965.61 20399.48c992.8,0 1797.64,764.71 1797.64,1708.02 0,943.3 -804.84,1708.01 -1797.64,1708.01 -992.81,0 -1797.65,-764.71 -1797.65,-1708.01 0,-943.31 804.84,-1708.02 1797.65,-1708.02z"/>
+  <path class="fil20" d="M17127 18388.65c992.8,0 1797.64,764.71 1797.64,1708.02 0,943.3 -804.84,1708.01 -1797.64,1708.01 -992.81,0 -1797.65,-764.71 -1797.65,-1708.01 0,-943.31 804.84,-1708.02 1797.65,-1708.02z"/>
+  <path class="fil21" d="M12328.19 19120.18c136.96,0 248,105.5 248,235.64 0,130.14 -111.04,235.64 -248,235.64 -136.97,0 -248.01,-105.5 -248.01,-235.64 0,-130.14 111.04,-235.64 248.01,-235.64z"/>
+  <path class="fil22" d="M8398.87 10265.47c304.3,0 550.98,234.39 550.98,523.52 0,289.12 -246.68,523.51 -550.98,523.51 -304.3,0 -550.99,-234.39 -550.99,-523.51 0,-289.13 246.69,-523.52 550.99,-523.52z"/>
+  <path class="fil23" d="M16732.21 11459.26c152.15,0 275.49,117.19 275.49,261.76 0,144.56 -123.34,261.75 -275.49,261.75 -152.15,0 -275.49,-117.19 -275.49,-261.75 0,-144.57 123.34,-261.76 275.49,-261.76z"/>
+  <path class="fil24" d="M3756.74 15062.16c486.2,0 880.34,374.49 880.34,836.44 0,461.95 -394.14,836.44 -880.34,836.44 -486.19,0 -880.33,-374.49 -880.33,-836.44 0,-461.95 394.14,-836.44 880.33,-836.44z"/>
+  <path class="fil25" d="M21033.47 19214.92c486.2,0 880.34,374.49 880.34,836.44 0,461.95 -394.14,836.44 -880.34,836.44 -486.19,0 -880.33,-374.49 -880.33,-836.44 0,-461.95 394.14,-836.44 880.33,-836.44z"/>
+  <path class="fil26" d="M14816.09 13746.81c343.42,0 621.83,264.52 621.83,590.83 0,326.3 -278.41,590.82 -621.83,590.82 -343.43,0 -621.83,-264.52 -621.83,-590.82 0,-326.31 278.4,-590.83 621.83,-590.83z"/>
+  <path class="fil27" d="M10653.61 7420.29c775.7,0 1404.53,597.48 1404.53,1334.5 0,737.02 -628.83,1334.5 -1404.53,1334.5 -775.7,0 -1404.53,-597.48 -1404.53,-1334.5 0,-737.02 628.83,-1334.5 1404.53,-1334.5z"/>
+ </g>
+</svg>
