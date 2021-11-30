@@ -10,9 +10,14 @@
 			'large-display': size == 3,
 		}"
 	>
+		<navigation></navigation>
 		<hero></hero>
 		<mint-button></mint-button>
-		<div style="height: 100vh; background: black"></div>
+		<kidz-band></kidz-band>
+
+		<starmap></starmap>
+		<f-a-q></f-a-q>
+		<cool-footer></cool-footer>
 	</div>
 </template>
 
@@ -21,6 +26,12 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 import Hero from "../components/Hero.vue";
 import MintButton from "../components/MintButton.vue";
+import FAQ from "../components/FAQ.vue";
+
+import KidzBand from "../components/KidzBand.vue";
+import Starmap from "../components/Starmap.vue";
+import CoolFooter from "../components/CoolFooter.vue";
+import Navigation from "../components/Navigation.vue";
 export default {
 	name: "Home",
 	data() {
@@ -32,6 +43,12 @@ export default {
 	components: {
 		Hero,
 		MintButton,
+		KidzBand,
+		FAQ,
+
+		Starmap,
+		CoolFooter,
+		Navigation,
 	},
 	methods: {
 		resize() {
@@ -57,47 +74,6 @@ export default {
 };
 </script>
 <style lang="scss">
-.container {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	margin: auto;
-	justify-items: center;
-}
-.med-display {
-	.container {
-		> * {
-			margin-left: 50px;
-			margin-right: 50px;
-		}
-	}
-}
-
-.small-display {
-	.container {
-		> * {
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-}
-.small-horizontal-display {
-	.container {
-		> * {
-			margin-left: 80px;
-			margin-right: 80px;
-		}
-	}
-}
-.large-display {
-	.container {
-		> * {
-			display: inline-grid;
-			width: 800px;
-			position: relative;
-		}
-	}
-}
 .home {
 	width: 100%;
 }

@@ -1,10 +1,8 @@
 <template>
 	<div class="hero">
+		<parallax-hero></parallax-hero>
 		<div class="container">
 			<div class="hero-elements">
-				<div class="hoodie-kidz-logo"></div>
-				<!-- <div class="scan-lines"></div>
-				<div class="scan-lines-dark"></div> -->
 				<div class="hoodie-kidz-text"></div>
 			</div>
 		</div>
@@ -12,84 +10,91 @@
 </template>
 
 <script>
+import ParallaxHero from "./ParallaxHero.vue";
 export default {
-	components: {},
+	components: {
+		ParallaxHero,
+	},
 };
 </script>
 
 <style lang="scss">
 .hero {
 	width: 100%;
-	height: 70vh;
-	background-position: center;
-	background-size: cover;
-	background-image: url(/img/page_hero.b1049f24.jpg);
+	// height: 100vh;
 	position: relative;
 	.hero-elements {
 		position: relative;
 		height: 100%;
+		width: 100%;
+		.hoodie-kidz-text {
+			position: absolute;
+		}
+	}
+	.container {
+		position: absolute;
 	}
 }
 .small-display {
+	.hero {
+		height: 70vh;
+	}
 	.hero-elements {
-		padding: 0 30px;
+		margin: 0 30px;
+		width: calc(100% - 60px);
 	}
 }
 
 .small-horizontal-display {
+	.hero {
+		height: 80vh;
+	}
 	.hero-elements {
 		// padding: 0 30px;
 	}
 }
 .med-display {
+	.hero {
+		height: 70vh;
+	}
 	.hero-elements {
-		// padding: 0 30px;
+		// margin: 0 80px;
+		width: calc(100% - 160px);
 	}
 }
 .large-display {
+	.hero {
+		height: 80vh;
+	}
 	.hero-elements {
+		.hoodie-kidz-text {
+			width: 800px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 		// padding: 0 30px;
+		// height: 80vh;
 	}
 }
-.hoodie-kidz-logo {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 65px;
-	height: 64px;
-	background-size: contain;
-	background-origin: 50% 50%;
-	background-image: url("../assets/hoodie-kidz-logo.svg");
-	mask: url("../assets/scan-lines-black_white.png");
-	// mask-size: 128px;
-	mask-size: 128px;
 
-	// mask-size: calc((15vw + 15vh) / 2 + 64px);
-
-	mask-repeat: repeat;
-	filter: drop-shadow(2px 2px 1px red) drop-shadow(-2px -2px 1px blue)
-		blur(1px);
-}
 .hoodie-kidz-text {
 	background-size: contain;
 	background-position: center;
 	background-image: url("../assets/hoodie-kidz-text.svg");
 	background-repeat: no-repeat;
-	filter: drop-shadow(2px 2px 1px red) drop-shadow(-2px -2px 1px blue)
-		blur(1px);
+	// filter: drop-shadow(2px 2px 5px rgba(255, 0, 0, 0.322))
+	// 	drop-shadow(-2px -2px 5px rgba(0, 0, 255, 0.404));
+	// box-shadow:1px 1px 1px  orangered;
+	filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.4));
 	transition: 0.15s;
-	mask: url("../assets/scan-lines-black_white.png");
-	// mask-size: calc((15vw + 15vh) / 2 + 64px);
 	mask-size: 128px;
 	mask-repeat: repeat;
 	position: relative;
-	top: 15vh;
+	top: 25vh;
 	left: 0;
 	width: 100%;
-	height: 40vh;
-	filter: drop-shadow(2px 2px 1px red) drop-shadow(-2px -2px 1px blue)
-		blur(1px);
-	mix-blend-mode: screen;
+	height: 30vh;
+	// mix-blend-mode: screen;
 	transition: 0.15s;
 }
 </style>

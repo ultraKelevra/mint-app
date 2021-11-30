@@ -3,17 +3,172 @@
 </template>
 
 <style lang="scss">
+section {
+	position: relative;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+.container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	top: 0;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 50px 0;
+	> * {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+}
+.med-display {
+	.container {
+		> * {
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+	}
+}
+
+.small-display {
+	.container {
+		> * {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+.small-horizontal-display {
+	.container {
+		> * {
+			margin-left: 80px;
+			margin-right: 80px;
+		}
+	}
+}
+.large-display {
+	.container {
+		> * {
+			display: inline-grid;
+			width: 800px;
+			position: relative;
+		}
+	}
+}
+.orange {
+	color: rgb(255, 127, 81);
+	font-weight: normal;
+	// filter: drop-shadow(1px 1px 0px red) drop-shadow(-1px -1px 0px blue);
+}
+.epic {
+	color: violet;
+	font-weight: normal;
+	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
+}
+.gold {
+	color: gold;
+	font-weight: normal;
+	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
+}
+.important {
+	color: white;
+	font-weight: normal;
+	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
+}
+.large-display {
+	h2 {
+		text-align: left;
+		font-weight: bolder;
+		font-size: 100px;
+		padding: 60px 0 0;
+	}
+	h3 {
+		text-align: left;
+		font-size: 35px;
+		padding: 30px 0 0 0;
+		font-weight: normal;
+	}
+
+	p {
+		// line-height: calc(50px + 0.5vw);
+		text-align: justify;
+		font-size: 30px;
+		padding: 10px 0;
+	}
+}
+.med-display {
+	h2 {
+		text-align: left;
+		font-weight: bolder;
+		font-size: 100px;
+		padding: 50px 0 0 0;
+	}
+	h3 {
+		text-align: left;
+		font-size: calc(30px + 0.5vh);
+		padding: 15px 0 0 0;
+	}
+
+	p {
+		text-align: justify;
+		font-size: calc(25px + 0.5vw);
+		padding: 10px 0;
+	}
+}
+.small-horizontal-display {
+	h2 {
+		text-align: left;
+		font-weight: bolder;
+		font-size: 100px;
+		padding: 0;
+	}
+	h3 {
+		text-align: left;
+		font-size: 20px;
+		padding: 20px 0 5px 0;
+	}
+
+	p {
+		text-align: justify;
+		font-size: calc(20px+0.5vw);
+		padding: 10px 0;
+	}
+}
+.small-display {
+	h2 {
+		text-align: left;
+		font-weight: bolder;
+		font-size: 100px;
+		padding: 0 30px 0 30px;
+	}
+	h3 {
+		text-align: left;
+		font-size: 25px;
+		padding: 30px 30px 0 30px;
+	}
+
+	p {
+		text-align: justify;
+		font-size: calc(20px + 0.2vw);
+		padding: 10px 30px;
+		line-height: calc(30px + 0.2vw);
+	}
+}
 h2 {
 	text-align: left;
 	font-weight: bolder;
-	font-size: calc(5vh);
+	font-size: 100px;
 	padding: 30px 30px 0 30px;
 }
 h3 {
 	text-align: left;
 	font-size: x-large;
 	padding: 0 0 0 30px;
-	// white-space: nowrap;
 }
 p {
 	text-align: justify;
@@ -33,14 +188,14 @@ h1 {
 	color: white;
 }
 h2 {
-	colore: rgb(231, 231, 231);
+	color: white;
 }
 h3 {
-	colore: rgb(231, 231, 231);
+	color: white;
 }
 
 p {
-	colore: rgb(175, 175, 175);
+	color: darkgray;
 }
 #app {
 	font-family: Yu Gothic UI;
@@ -48,7 +203,7 @@ p {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	color: #ffffff;
+	color: darkgray;
 }
 
 #nav {
