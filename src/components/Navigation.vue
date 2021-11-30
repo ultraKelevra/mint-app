@@ -76,11 +76,10 @@ export default {
 	}
 	.hoodie-kidz-logo {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top: -5px;
 		left: 0;
 		width: 8vmin;
-		height: 8vmin;
+		bottom: -5px;
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-origin: 50% 50%;
@@ -107,14 +106,13 @@ export default {
 
 .small-display {
 	.navigation {
-		.hoodie-kidz-logo {
-			margin-top: 15px;
-		}
+		// .hoodie-kidz-logo {
+		// }
 	}
 }
 .small-horizontal-display {
 	.navigation {
-		padding-top: 0;
+		margin-top: 15px;
 		.hoodie-kidz-logo {
 		}
 		.nav-container {
@@ -128,10 +126,8 @@ export default {
 }
 .large-display {
 	.navigation {
-		padding-top: 15px;
+		margin-top: 15px;
 		.hoodie-kidz-logo {
-			width: 8vmin;
-			height: 8vmin;
 		}
 	}
 }

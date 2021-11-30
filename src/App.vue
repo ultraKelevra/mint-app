@@ -80,7 +80,35 @@ section {
 	font-weight: normal;
 	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
 }
+.date {
+	background: #ffdd7d;
+	padding: 0 20px;
+}
+.important-data {
+	background: #ffdd7d;
+	padding: 0 20px;
+	font-size: 50px;
+}
+.important h3 {
+	font-weight: bold;
+}
+.purple {
+	color: #704fbf;
+}
+.salmon {
+	color: #fa8085;
+}
+.pink {
+	color: #eb52b3;
+}
+
+.description {
+	background-color: rgb(36, 36, 36);
+}
 .large-display {
+	.date {
+		font-size: 100px;
+	}
 	h2 {
 		text-align: left;
 		font-weight: bolder;
@@ -102,10 +130,13 @@ section {
 	}
 }
 .med-display {
+	.date {
+		font-size: 80px;
+	}
 	h2 {
 		text-align: left;
 		font-weight: bolder;
-		font-size: 100px;
+		font-size: 80px;
 		padding: 50px 0 0 0;
 	}
 	h3 {
@@ -121,10 +152,13 @@ section {
 	}
 }
 .small-horizontal-display {
+	.date {
+		font-size: 70px;
+	}
 	h2 {
 		text-align: left;
 		font-weight: bolder;
-		font-size: 100px;
+		font-size: 70px;
 		padding: 0;
 	}
 	h3 {
@@ -140,10 +174,16 @@ section {
 	}
 }
 .small-display {
+	.important-data {
+		font-size: 30px;
+	}
+	.date {
+		font-size: 50px;
+	}
 	h2 {
 		text-align: left;
 		font-weight: bolder;
-		font-size: 100px;
+		font-size: 50px;
 		padding: 0 30px 0 30px;
 	}
 	h3 {
@@ -204,6 +244,7 @@ p {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: darkgray;
+	overflow: hidden;
 }
 
 #nav {
