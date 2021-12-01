@@ -72,9 +72,7 @@ export default {
 			this.black = percent;
 		},
 	},
-	components: {
-		// ParallaxBackground,
-	},
+	components: {},
 	mounted() {
 		window.addEventListener("scroll", this.setParallax);
 		this.setParallax();
@@ -200,6 +198,7 @@ export default {
 	background: url("../assets/starmap_bg.svg");
 	background-size: cover;
 	background-attachment: fixed;
+	// background-position-y: calc(5vh + 33px);
 	.starmap-grid {
 		display: grid;
 

@@ -33,6 +33,7 @@ export default {
 	}
 	.container {
 		position: absolute;
+		padding: 0;
 	}
 }
 .small-display {
@@ -42,6 +43,10 @@ export default {
 	.hero-elements {
 		margin: 0 30px;
 		width: calc(100% - 60px);
+		.hoodie-kidz-text {
+			height: 30vh;
+			top: 35vh;
+		}
 	}
 }
 
@@ -50,7 +55,10 @@ export default {
 		height: 80vh;
 	}
 	.hero-elements {
-		// padding: 0 30px;
+		.hoodie-kidz-text {
+			top: 37.5vh;
+			height: 25vh;
+		}
 	}
 }
 .med-display {
@@ -58,7 +66,10 @@ export default {
 		height: 70vh;
 	}
 	.hero-elements {
-		// margin: 0 80px;
+		.hoodie-kidz-text {
+			top: 30vh;
+			height: 25vh;
+		}
 		width: calc(100% - 160px);
 	}
 }
@@ -71,30 +82,20 @@ export default {
 			width: 800px;
 			left: 50%;
 			transform: translateX(-50%);
+			top: 35vh;
+			height: 30vh;
 		}
-		// padding: 0 30px;
-		// height: 80vh;
 	}
 }
-
-.hoodie-kidz-text {
-	background-size: contain;
-	background-position: center;
-	background-image: url("../assets/hoodie-kidz-text.svg");
-	background-repeat: no-repeat;
-	// filter: drop-shadow(2px 2px 5px rgba(255, 0, 0, 0.322))
-	// 	drop-shadow(-2px -2px 5px rgba(0, 0, 255, 0.404));
-	// box-shadow:1px 1px 1px  orangered;
-	filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.4));
-	transition: 0.15s;
-	mask-size: 128px;
-	mask-repeat: repeat;
-	position: relative;
-	top: 25vh;
-	left: 0;
-	width: 100%;
-	height: 30vh;
-	// mix-blend-mode: screen;
-	transition: 0.15s;
+.hero {
+	.hoodie-kidz-text {
+		background-size: contain;
+		background-position: center;
+		background-image: url("../assets/hoodie-kidz-text.svg");
+		background-repeat: no-repeat;
+		filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.4));
+		position: relative;
+		width: 100%;
+	}
 }
 </style>

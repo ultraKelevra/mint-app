@@ -36,18 +36,16 @@ export default {
 			var height = document.documentElement.clientHeight;
 
 			var offsetTop = self.$el.parentNode.getBoundingClientRect().top;
-			var visible = offsetTop / height > -1;
-			if (!visible) return;
-			var percent = (offsetTop / height) * 100;
-
+			var percent = offsetTop / height;
+			var visible = percent > -1;
 			if (!visible) return;
 
 			self.$refs.parallax_1.style.transform =
-				"translateY(" + -0.75 * percent + "%)";
+				"translateY(" + -0.7 * offsetTop + "px)";
 			self.$refs.parallax_2.style.transform =
-				"translateY(" + -0.6 * percent + "%)";
+				"translateY(" + -0.5 * offsetTop + "px)";
 			self.$refs.parallax_3.style.transform =
-				"translateY(" + -0.4 * percent + "%)";
+				"translateY(" + -0.35 * offsetTop + "px)";
 		};
 		window.requestAnimationFrame(setParallaxFrame);
 	},
@@ -56,17 +54,34 @@ export default {
 </script>
 
 <style lang="scss">
-.vertical {
+.small-display {
 	.parallax-background {
-		background-size: auto 100%;
-		background-attachment: fixed;
+		.parallax-2 {
+			left: -30%;
+		}
+		.parallax-3 {
+			display: none;
+		}
+		.parallax-foreground {
+			width: 200%;
+			right: 0;
+			left: unset;
+		}
 	}
 }
-.horizontal {
+.med-display {
 	.parallax-background {
-		// background-position-y: -25vh;
+		.parallax-2 {
+			left: -15%;
+		}
+		.parallax-foreground {
+			width: 200%;
+			right: 0;
+			left: unset;
+		}
 	}
 }
+
 .parallax-background {
 	overflow: hidden;
 	background-size: cover;

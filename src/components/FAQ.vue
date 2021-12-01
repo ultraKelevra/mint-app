@@ -74,9 +74,15 @@ export default {};
 	}
 	// border-bottom: solid 1px rgb(37, 37, 37);
 }
+.med-display {
+	.container {
+		padding-top: 10vh;
+	}
+}
+
 .small-display {
-	.kidz-description {
-		height: 110vh;
+	.container {
+		padding-top: 15vh;
 	}
 }
 </style>

@@ -15,8 +15,8 @@
 		<mint-button></mint-button>
 		<kidz-band></kidz-band>
 
-		<starmap></starmap>
-		<f-a-q></f-a-q>
+		<starmap id="starmap"></starmap>
+		<f-a-q id="faq"></f-a-q>
 		<cool-footer></cool-footer>
 	</div>
 </template>

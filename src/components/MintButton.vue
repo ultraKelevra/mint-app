@@ -14,7 +14,7 @@
 				>
 					<p>Join the coolest kidz in all the land of Gooo</p>
 				</div>
-				<button style="grid-area: b">MINT</button>
+				<button style="grid-area: b" id="about">MINT</button>
 				<p style="grid-area: c">
 					By minting a <span class="important">Hoodie Kid</span> you
 					will become <span class="gold">patreon</span> of a
@@ -164,7 +164,6 @@ export default {
 			}
 
 			p {
-				// line-height: calc(50px + 0.5vw);
 				text-align: justify;
 				font-size: 30px;
 				padding: 15px 0 0 0;
@@ -179,11 +178,6 @@ export default {
 
 .minting-section {
 	position: relative;
-	// background-attachment: fixed;
-	// background-color: rgb(0, 0, 0);
-	// background-position: center;
-	// background-size: contain;
-	// background-image: url("../assets/menu_sky.svg");
 	.minting-text-top {
 		display: grid;
 		top: 0;

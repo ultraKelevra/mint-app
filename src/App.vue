@@ -216,7 +216,9 @@ p {
 	padding: 40px 30px 0 30px;
 	font-weight: lighter;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 body {
 	background: black;
 }
