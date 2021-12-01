@@ -116,7 +116,7 @@ export default {
 		height: 100%;
 	}
 	.parallax-foreground {
-		bottom: 0;
+		bottom: -1px;
 		left: 0;
 		width: 100%;
 	}
