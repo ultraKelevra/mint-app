@@ -66,14 +66,10 @@ export default {
 	},
 	methods: {
 		setParallax() {
-			var height = document.documentElement.clientHeight;
+			var height = window.screen.availHeight;
 			var offsetTop = this.$el.getBoundingClientRect().top;
-			var percent = offsetTop / height;
-
-			if (percent < 0) percent = 0;
-			percent /= 100;
-			if (percent > 1) percent = 1;
-			this.black = percent + percent * 2;
+			var percent = 1 - (height - offsetTop) / height + 1;
+			this.black = percent;
 		},
 	},
 	components: {

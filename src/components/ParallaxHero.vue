@@ -1,70 +1,57 @@
 <template>
 	<div class="parallax-background">
-		<div
+		<img
+			ref="parallax_1"
 			class="parallax-1"
-			:style="{ transform: 'translateY(' + offset_1 + '%)' }"
-		></div>
-		<div
+			src="../assets/treehouse-background/bg_1.svg"
+		/>
+		<img
+			ref="parallax_2"
 			class="parallax-2"
-			:style="{ transform: 'translateY(' + offset_2 + '%)' }"
-		></div>
-		<div
+			src="../assets/treehouse-background/bg_2.png"
+		/>
+		<img
+			ref="parallax_3"
 			class="parallax-3"
-			:style="{ transform: 'translateY(' + offset_3 + '%)' }"
-		></div>
-		<div
-			class="parallax-4"
-			:style="{ transform: 'translateY(' + offset_3 + '%)' }"
-		></div>
-		<div
-			class="parallax-5"
-			:style="{ transform: 'translateY(' + offset_4 + '%)' }"
-		></div>
-		<div
-			class="parallax-6"
-			:style="{ transform: 'translateY(' + offset_4 + '%)' }"
-		></div>
-		<div class="parallax-foreground"></div>
+			src="../assets/treehouse-background/bg_3.png"
+		/>
+		<img
+			class="parallax-foreground"
+			src="../assets/treehouse-background/parallax-foreground.svg"
+		/>
 	</div>
 </template>
 
 <script>
 export default {
 	data() {
-		return {
-			offset_1: 0,
-			offset_2: 0,
-			offset_3: 0,
-			offset_4: 0,
-
-			initial_scroll: 0,
-		};
+		return {};
 	},
-	methods: {
-		setParallax() {
+	methods: {},
+	mounted() {
+		var self = this;
+		var setParallaxFrame = function () {
+			window.requestAnimationFrame(setParallaxFrame);
+
 			var height = document.documentElement.clientHeight;
-			var offsetTop = this.$el.parentNode.getBoundingClientRect().top;
+
+			var offsetTop = self.$el.parentNode.getBoundingClientRect().top;
+			var visible = offsetTop / height > -1;
+			if (!visible) return;
 			var percent = (offsetTop / height) * 100;
 
-			this.offset_1 = -0.75 * percent;
-			this.offset_2 = -0.6 * percent;
-			this.offset_3 = -0.4 * percent;
-			this.offset_4 = -0.3 * percent;
-			this.offset_5 = -1 * percent;
+			if (!visible) return;
 
-			// console.log(percent);
-			if (percent < 0) percent = 0;
-			percent /= 100;
-			if (percent > 1) percent = 1;
-		},
+			self.$refs.parallax_1.style.transform =
+				"translateY(" + -0.75 * percent + "%)";
+			self.$refs.parallax_2.style.transform =
+				"translateY(" + -0.6 * percent + "%)";
+			self.$refs.parallax_3.style.transform =
+				"translateY(" + -0.4 * percent + "%)";
+		};
+		window.requestAnimationFrame(setParallaxFrame);
 	},
-	mounted() {
-		window.addEventListener("scroll", this.setParallax);
-		this.setParallax();
-	},
-	unmounted() {
-		window.removeEventListener("scroll", this.setParallax);
-	},
+	unmounted() {},
 };
 </script>
 
@@ -90,50 +77,33 @@ export default {
 	position: relative;
 	background-position: bottom;
 
-	// background-attachment: fixed;
 	> * {
-		width: 100%;
-		height: 100%;
 		position: absolute;
 		background-color: transparent;
 		background-position: left bottom;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-	.parallax-0 {
-		background-attachment: fixed;
-		background-image: url("../assets/treehouse-background/bg_0.svg");
-	}
 	.parallax-1 {
-		background-position: right bottom;
-
-		background-image: url("../assets/treehouse-background/bg_1.svg");
+		right: 0;
+		left: 0;
+		bottom: 0;
 	}
-	.parallax-2 {
-		background-position: right bottom;
 
-		background-image: url("../assets/treehouse-background/bg_2.svg");
+	.parallax-2 {
+		left: 0;
+		height: 100%;
+		bottom: 0;
 	}
 	.parallax-3 {
-		background-image: url("../assets/treehouse-background/bg_3.png");
-	}
-	.parallax-4 {
-		background-position: left bottom;
-		background-image: url("../assets/treehouse-background/bg_4.svg");
-		mix-blend-mode: screen;
-		opacity: 0.5;
-	}
-	.parallax-5 {
-		background-position: left top;
-		background-image: url("../assets/treehouse-background/bg_5.svg");
-		mix-blend-mode: screen;
-	}
-	.parallax-6 {
-		background-position: left top;
-		background-image: url("../assets/treehouse-background/bg_6.png");
+		top: 0;
+		right: 0;
+		height: 100%;
 	}
 	.parallax-foreground {
-		background-image: url("../assets/treehouse-background/parallax-foreground.svg");
+		bottom: 0;
+		left: 0;
+		width: 100%;
 	}
 }
 </style>

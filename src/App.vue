@@ -107,7 +107,7 @@ section {
 }
 .large-display {
 	.date {
-		font-size: 100px;
+		font-size: 80px;
 	}
 	h2 {
 		text-align: left;
