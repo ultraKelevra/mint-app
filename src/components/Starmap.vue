@@ -13,7 +13,26 @@
 				</div>
 				<div class="a"><span class="date pink">DEC/25</span></div>
 				<div class="b empty"></div>
-				<div class="c empty"></div>
+				<div class="c">
+					<img
+						ref="rocket"
+						src="../assets/starmap/rocket_boy.png"
+						alt=""
+						class="rocket-figure"
+					/>
+					<img
+						ref="stars_0"
+						src="../assets/starmap/stars_0.svg"
+						alt=""
+						class="moon-figure"
+					/>
+					<img
+						ref="moon"
+						src="../assets/starmap/moon.svg"
+						alt=""
+						class="moon-figure"
+					/>
+				</div>
 				<div class="d description">
 					<h3>Minting is open</h3>
 					<p>
@@ -57,7 +76,6 @@
 </template>
 
 <script>
-// import ParallaxBackground from "./ParallaxBackground.vue";
 export default {
 	data() {
 		return {
@@ -74,8 +92,48 @@ export default {
 	},
 	components: {},
 	mounted() {
+		var self = this;
+		var lerp = function (a, b, t) {
+			return a + (b - a) * t;
+		};
+		var invLerp = function (a, b, c) {
+			return (c - a) / (b - a);
+		};
+		var setParallaxFrame = function () {
+			window.requestAnimationFrame(setParallaxFrame);
+
+			var height = window.screen.availHeight;
+			var parallaxPerElement = function (elem, start, end) {
+				var pbbox = elem.parentNode.getBoundingClientRect();
+
+				var bbox = elem.getBoundingClientRect();
+				var scroll = window.scrollY;
+
+				var top = pbbox.top + elem.offsetTop;
+				var bottom = top + bbox.height + scroll;
+				var parallaxTop = top + start * height;
+				var parallaxBottom = bottom + end * height;
+
+				var t = invLerp(
+					parallaxTop,
+					parallaxBottom,
+					document.documentElement.scrollTop
+				);
+
+				var visible = t >= 0 && t <= 1;
+				if (!visible) return;
+
+				elem.style.transform =
+					"translateY(" +
+					Math.round(lerp(start, end, t) * height) +
+					"px)";
+			};
+			parallaxPerElement(self.$refs.rocket, 0.3, -0.3);
+			parallaxPerElement(self.$refs.moon, -0.5, 0.5);
+			parallaxPerElement(self.$refs.stars_0, -1.5, 1.5);
+		};
+		window.requestAnimationFrame(setParallaxFrame);
 		window.addEventListener("scroll", this.setParallax);
-		this.setParallax();
 	},
 	unmounted() {
 		window.removeEventListener("scroll", this.setParallax);
@@ -109,6 +167,7 @@ export default {
 }
 .small-display {
 	.starmap {
+		overflow: hidden;
 		.starmap-grid {
 			grid-template-columns: 0;
 			grid-template-areas: "t";
@@ -155,11 +214,27 @@ export default {
 }
 
 .large-display {
+	.rocket-figure {
+		position: absolute;
+		right: 0;
+		top: 15vh;
+		width: 65vw;
+		z-index: 1000;
+	}
+	.moon-figure {
+		position: absolute;
+		top: -25vh;
+		width: 100vw;
+		right: -50vw;
+		filter: drop-shadow(0 0 25px yellow) saturate(0.5);
+		// transition: 1s;
+	}
+
 	.starmap {
 		.starmap-grid {
 			grid-template-columns: 400px 400px;
 			grid-template-areas: "t t";
-			grid-template-rows: 30vh 25vh 60vh 25vh 60vh 25vh 100vh;
+			grid-template-rows: 75vh 25vh 60vh 25vh 60vh 25vh 100vh;
 			h2 {
 				margin: 0;
 				padding: 0;
@@ -198,7 +273,7 @@ export default {
 	background: url("../assets/starmap_bg.svg");
 	background-size: cover;
 	background-attachment: fixed;
-	// background-position-y: calc(5vh + 33px);
+	overflow: hidden;
 	.starmap-grid {
 		display: grid;
 
