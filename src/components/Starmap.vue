@@ -11,7 +11,7 @@
 				<div class="t">
 					<h2>STARMAP</h2>
 				</div>
-				<div class="a"><span class="date pink">DEC/25</span></div>
+				<div class="a"><span class="date pink">2022/JAN</span></div>
 				<div class="b empty"></div>
 				<div class="c">
 					<img
@@ -21,8 +21,8 @@
 						class="rocket-figure"
 					/>
 					<img
-						ref="stars_0"
-						src="../assets/starmap/stars_0.svg"
+						ref="stars"
+						src="../assets/starmap/stars.svg"
 						alt=""
 						class="moon-figure"
 					/>
@@ -44,7 +44,7 @@
 				<div class="a empty"></div>
 				<div class="b">
 					<span class="purple important-data"> 50% minting </span>
-					<span class="date purple">2022/JAN </span>
+					<span class="date purple">2022/FEB </span>
 				</div>
 				<div class="c description">
 					<h3>Move to an office</h3>
@@ -54,10 +54,62 @@
 						dolore magna aliqua. Ut enim ad minim veniam.
 					</p>
 				</div>
-				<div class="d empty"></div>
-				<div class="a"><span class="date salmon">2022/MAR </span></div>
+				<div class="d">
+					<img
+						ref="computer"
+						class="computer"
+						src="../assets/starmap/computer.png"
+						alt=""
+					/>
+					<img
+						ref="floppy_0"
+						class="floppy-0"
+						src="../assets/starmap/floppy_0.png"
+						alt=""
+					/>
+					<img
+						ref="floppy_1"
+						class="floppy-1"
+						src="../assets/starmap/floppy_1.png"
+						alt=""
+					/>
+				</div>
+				<div class="a"><span class="date salmon">2022/MAY </span></div>
 				<div class="b empty"></div>
-				<div class="c empty"></div>
+				<div class="c">
+					<img
+						ref="gamekid"
+						class="gamekid"
+						src="../assets/starmap/gamekid.png"
+						alt=""
+					/>
+					<img
+						ref="sword"
+						class="sword"
+						src="../assets/starmap/sword.png"
+						alt=""
+					/>
+					<img
+						ref="crown_1"
+						class="crown-1"
+						src="../assets/starmap/crown_1.png"
+						alt=""
+					/>
+
+					<img
+						ref="crown_0"
+						class="crown-0"
+						src="../assets/starmap/crown_0.png"
+						alt=""
+					/>
+
+					<img
+						ref="medallion"
+						class="medallion"
+						src="../assets/starmap/medallion.png"
+						alt=""
+					/>
+				</div>
 				<div class="d important-description starchild">
 					<h3>Release Beta of "Staff of Mana" (Play to earn game)</h3>
 					<p>
@@ -70,7 +122,34 @@
 					</p>
 				</div>
 				<div class="a empty"></div>
+				<div class="b">
+					<span class="purple important-data"> 100% minting </span>
+					<span class="date purple">2022/XX </span>
+				</div>
+				<div class="c description">
+					<h3>We'll see...</h3>
+					<p>
+						Once reached this point, our main objective will be to
+						preserve the value our product will have.
+						<span class="important"
+							>Keeping the game exciting and updated will be
+							priority</span
+						>.<br /><br />The
+						<span class="gold">patreons</span> will then vote for
+						what will <span class="important">The Team</span> work
+						on next.<br /><br />
+						It's hard to plan so far ahead. Jump in and let's see
+						what cool, exciting and weird stuff we end up building
+						:)
+					</p>
+				</div>
+				<div class="d"></div>
 			</div>
+			<img
+				class="starmap-clouds"
+				src="../assets/starmap/clouds.svg"
+				alt=""
+			/>
 		</div>
 	</div>
 </template>
@@ -130,7 +209,17 @@ export default {
 			};
 			parallaxPerElement(self.$refs.rocket, 0.3, -0.3);
 			parallaxPerElement(self.$refs.moon, -0.5, 0.5);
-			parallaxPerElement(self.$refs.stars_0, -1.5, 1.5);
+			parallaxPerElement(self.$refs.stars, -1, 1);
+			parallaxPerElement(self.$refs.computer, 0.3, -0.1);
+			parallaxPerElement(self.$refs.floppy_0, 0.7, -0.1);
+			parallaxPerElement(self.$refs.floppy_1, 0.5, -0.75);
+
+			//3rd
+			parallaxPerElement(self.$refs.sword, 0.5, -0.2);
+			parallaxPerElement(self.$refs.crown_0, 0.9, -0.3);
+			parallaxPerElement(self.$refs.crown_1, 1, -0.2);
+			parallaxPerElement(self.$refs.gamekid, 0.5, -0.2);
+			parallaxPerElement(self.$refs.medallion, 1.3, -0.35);
 		};
 		window.requestAnimationFrame(setParallaxFrame);
 		window.addEventListener("scroll", this.setParallax);
@@ -227,10 +316,75 @@ export default {
 		width: 100vw;
 		right: -50vw;
 		filter: drop-shadow(0 0 25px yellow) saturate(0.5);
-		// transition: 1s;
+	}
+	.computer {
+		position: absolute;
+		bottom: -15vh;
+		width: 25vw;
+		left: -7vh;
+	}
+	.floppy-0 {
+		position: absolute;
+		bottom: 25vh;
+		width: 10vw;
+		left: 0;
+	}
+	.floppy-1 {
+		position: absolute;
+		bottom: -25vh;
+		width: 18vw;
+		left: 20vh;
+		filter: blur(3px);
+		z-index: 5;
+	}
+
+	.medallion {
+		position: absolute;
+		right: 15vw;
+		top: 35vh;
+		width: 15vw;
+		z-index: 1000;
+	}
+	.crown-0 {
+		position: absolute;
+		right: 0;
+		top: 45vh;
+		width: 15vw;
+		z-index: 1000;
+	}
+	.crown-1 {
+		position: absolute;
+		right: 5vw;
+		top: 75vh;
+		width: 10vw;
+		z-index: 1000;
+	}
+	.gamekid {
+		position: absolute;
+		right: 12vw;
+		top: 65vh;
+		width: 17vw;
+		z-index: 1000;
+	}
+
+	.sword {
+		position: absolute;
+		right: -45px;
+		top: 10vh;
+		width: 30vw;
+		z-index: 1000;
 	}
 
 	.starmap {
+		.starmap-clouds {
+			position: absolute;
+			width: 100vw;
+			left: 0;
+			bottom: -2px;
+		}
+		.container {
+			padding-bottom: 50vh;
+		}
 		.starmap-grid {
 			grid-template-columns: 400px 400px;
 			grid-template-areas: "t t";
