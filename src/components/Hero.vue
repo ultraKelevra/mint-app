@@ -38,14 +38,14 @@ export default {
 }
 .small-display {
 	.hero {
-		height: 70vh;
+		height: 75vh;
 	}
 	.hero-elements {
 		margin: 0 30px;
 		width: calc(100% - 60px);
 		.hoodie-kidz-text {
 			height: 30vh;
-			top: 35vh;
+			top: 20vh;
 		}
 	}
 }
@@ -75,7 +75,7 @@ export default {
 }
 .large-display {
 	.hero {
-		height: 80vh;
+		height: 85vh;
 	}
 	.hero-elements {
 		.hoodie-kidz-text {

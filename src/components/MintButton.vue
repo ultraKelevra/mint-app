@@ -15,16 +15,28 @@
 					<p>Join the coolest kidz in all the land of Gooo</p>
 				</div>
 				<button style="grid-area: b" id="about">MINT</button>
-				<p style="grid-area: c">
-					By minting a <span class="important">Hoodie Kid</span> you
-					will become <span class="gold">patreon</span> of a
-					passionate creative team ready to give it all in the future
-					of the blockchain.
-					<span class="important">The team</span> will then reward
-					<span class="gold">patreons</span> by providing them with
-					<span class="gold">perks</span> in coming projects and
-					events.
-				</p>
+				<div style="grid-area: c">
+					<p>
+						By minting a
+						<span class="important">Hoodie Kid</span> you will
+						become <span class="gold">patreon</span> of a passionate
+						creative team ready to give it all in the future of the
+						blockchain. <span class="important">The team</span> will
+						then reward <span class="gold">patreons</span> by
+						providing them with <span class="gold">perks</span> in
+						coming projects and events.
+					</p>
+
+					<p>
+						<span class="important">The first project</span> is a
+						<span class="epic">"play to earn" videogame</span> and
+						the related <span class="gold">perks</span> will be
+						initial
+						<span class="epic">
+							in-game items in form of exclusive NFTs</span
+						>.
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -80,6 +92,9 @@ export default {
 }
 .small-horizontal-display {
 	.minting-section {
+		.container {
+			padding-top: 8vh;
+		}
 		.minting-text-top {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 20vh auto;
@@ -178,12 +193,16 @@ export default {
 
 .minting-section {
 	position: relative;
+	.container {
+		padding-top: 0;
+	}
 	.minting-text-top {
 		display: grid;
 		top: 0;
 		left: 0;
 		margin-top: -30px;
 		button {
+			font-family: "rubik";
 			margin: 0 30px 0 30px;
 			transform: translateY(-5vh);
 			border-radius: 15px;

@@ -26,6 +26,9 @@
 					<a href="#about">About</a>
 					<a href="#starmap">Starmap</a>
 					<a href="#faq">FAQ</a>
+					<a href="#mint" style="font-weight: bold; color: gold"
+						>MINT</a
+					>
 				</div>
 			</div>
 		</div>
@@ -38,6 +41,9 @@
 				<a href="#about"><span class="purple">About</span></a>
 				<a href="#starmap"><span class="salmon">Starmap</span></a>
 				<a href="#faq"><span class="pink">FAQ</span></a>
+				<a href="#mint" class="" style="font-weight: bold; color: gold"
+					><span>MINT</span></a
+				>
 				<a><div class="discord"></div></a>
 				<a><div class="twitter"></div></a>
 			</div>
@@ -88,14 +94,10 @@ export default {
 </script>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-active,
-.fade-leave-to {
-	opacity: 0;
+.med-display {
+	.nav-container {
+		grid-gap: 3vh;
+	}
 }
 .hamburger-display {
 	transition: opacity 0.5s;
@@ -106,6 +108,8 @@ export default {
 	display: grid;
 	background: black;
 	width: 100vw;
+	align-content: stretch;
+	padding-bottom: 50px;
 	> * {
 		width: 100%;
 		display: flex;

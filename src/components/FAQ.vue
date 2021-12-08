@@ -6,22 +6,27 @@
 				<h3>What's a KID?</h3>
 				<p>
 					Every <span class="important">Hoodie Kid</span> is a unique
-					<span class="important">ERC-721</span> token.<br />Each
-					token is connected to a programmatically generated profile
-					picture, hosted on IPFS. This pictures are made from over
-					<span class="epic">120 traits</span> including expression,
-					hat, clothing, hair, and more. Some of this traits are more
-					<span class="epic">rare</span> than others. But all are
-					cool.
+					<span class="important">ERC-721</span> token in the
+					<span class="important">Etherium blockchain</span
+					>.<br />Each token is connected to a programmatically
+					generated profile picture, hosted on IPFS. This pictures are
+					made from over <span class="epic">120 traits</span> like
+					expressions, hats, clothings, hairstyles, and more. Some of
+					this traits are more <span class="epic">rare</span> than
+					others. But all traits are cool.
 				</p>
 				<h3>What do I get?</h3>
 				<p>
 					Additionally to a super dope profile picture...<br />
-					Holding a kid gives access to
+					Several
+					<span class="gold">perks</span> we will be given to kid
+					holders during this year (See
+					<a href="#starmap">STARMAP</a> section) And additional perks
+					will come to the holders as our future plans develop and our
+					STARMAP grows. Additionally, the projects and events will be
+					discussed in a
 					<span class="important">patreons-only chats</span> in our
-					Discord Server. And several
-					<span class="gold">perks</span> we will be giving to kid
-					holders in the coming year. (See STARMAP section)
+					Discord Server. Kids holders will gain access to this chat.
 				</p>
 				<h3>
 					Do I get more <span class="gold">PERKS</span> having
@@ -40,7 +45,8 @@
 					<span class="gold">patreons</span>. All
 					<span class="gold">kid holders</span> are equally important
 					for us. Each kid will be used for airdrop, reward, raffle or
-					mint all perks we will drop in the future
+					mint all <span class="gold">perks</span> we will drop in the
+					future
 					<span class="important">
 						independent of the kid's
 						<span class="epic">rarity</span> </span

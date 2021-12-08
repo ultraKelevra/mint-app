@@ -11,26 +11,28 @@
 				<div class="t">
 					<h2>STARMAP</h2>
 				</div>
-				<div class="a"><span class="date pink">2022/JAN</span></div>
+				<div class="a date-section">
+					<span class="date pink">2022/JAN</span>
+				</div>
 				<div class="b empty"></div>
 				<div class="c">
-					<img
-						ref="rocket"
-						src="../assets/starmap/rocket_boy.png"
-						alt=""
-						class="rocket-figure"
-					/>
 					<img
 						ref="stars"
 						src="../assets/starmap/stars.svg"
 						alt=""
-						class="moon-figure"
+						class="moon-figure stars"
 					/>
 					<img
 						ref="moon"
 						src="../assets/starmap/moon.svg"
 						alt=""
 						class="moon-figure"
+					/>
+					<img
+						ref="rocket"
+						src="../assets/starmap/rocket_boy.png"
+						alt=""
+						class="rocket-figure"
 					/>
 				</div>
 				<div class="d description">
@@ -42,7 +44,7 @@
 					</p>
 				</div>
 				<div class="a empty"></div>
-				<div class="b">
+				<div class="b date-section">
 					<span class="purple important-data"> 50% minting </span>
 					<span class="date purple">2022/FEB </span>
 				</div>
@@ -74,7 +76,9 @@
 						alt=""
 					/>
 				</div>
-				<div class="a"><span class="date salmon">2022/MAY </span></div>
+				<div class="a date-section">
+					<span class="date salmon">2022/MAY </span>
+				</div>
 				<div class="b empty"></div>
 				<div class="c">
 					<img
@@ -110,9 +114,9 @@
 						alt=""
 					/>
 				</div>
-				<div class="d important-description starchild">
+				<div class="d important-description description">
 					<h3>Release Beta of "Staff of Mana" (Play to earn game)</h3>
-					<p>
+					<p class="important">
 						Lorem ipsum dolor sit amet, consectetur adipisicing
 						elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua. Ut enim ad minim veniam. Lorem
@@ -122,9 +126,16 @@
 					</p>
 				</div>
 				<div class="a empty"></div>
-				<div class="b">
-					<span class="purple important-data"> 100% minting </span>
-					<span class="date purple">2022/XX </span>
+				<div class="b date-section">
+					<span
+						class="important-data"
+						style="background: black; color: white"
+					>
+						100% minting
+					</span>
+					<span class="date" style="background: black; color: white"
+						>2022/XX
+					</span>
 				</div>
 				<div class="c description">
 					<h3>We'll see...</h3>
@@ -143,7 +154,18 @@
 						:)
 					</p>
 				</div>
-				<div class="d"></div>
+				<div class="d">
+					<img
+						class="hand"
+						ref="hand"
+						src="../assets/starmap/golden_hand.png"
+						alt=""
+					/>
+					<div ref="ball" class="ball">
+						<div class="ball-fill" />
+						<img src="../assets/starmap/crystal_ball.png" alt="" />
+					</div>
+				</div>
 			</div>
 			<img
 				class="starmap-clouds"
@@ -220,6 +242,10 @@ export default {
 			parallaxPerElement(self.$refs.crown_1, 1, -0.2);
 			parallaxPerElement(self.$refs.gamekid, 0.5, -0.2);
 			parallaxPerElement(self.$refs.medallion, 1.3, -0.35);
+
+			//4th
+			parallaxPerElement(self.$refs.ball, 2, -0.3);
+			parallaxPerElement(self.$refs.hand, 1, -0.5);
 		};
 		window.requestAnimationFrame(setParallaxFrame);
 		window.addEventListener("scroll", this.setParallax);
@@ -239,11 +265,6 @@ export default {
 	background: black;
 	mask-repeat: repeat;
 }
-.starchild {
-	background-image: url("../assets/treehouse-background/bg_0.svg");
-	background-size: cover;
-	background-attachment: fixed;
-}
 
 .important-description {
 	background-color: rgb(238, 190, 57);
@@ -255,13 +276,111 @@ export default {
 	}
 }
 .small-display {
+	.stars {
+		display: none;
+	}
+	.rocket-figure {
+		position: absolute;
+		left: -60vw;
+		top: -40vh;
+		width: 130vw;
+		z-index: 5000;
+	}
+	.moon-figure {
+		position: absolute;
+		top: -80vh;
+		width: 125vw;
+		right: -15vw;
+		filter: drop-shadow(0 0 25px yellow) saturate(0.5);
+	}
+	.computer {
+		position: absolute;
+		width: 80vw;
+		top: -100vh;
+		right: 0vh;
+		z-index: 10;
+	}
+	.floppy-0 {
+		position: absolute;
+		top: -100vh;
+		width: 30vw;
+		left: 0;
+		z-index: 10;
+	}
+	.floppy-1 {
+		display: none;
+	}
+
+	.medallion {
+		display: none;
+	}
+	.crown-0 {
+		position: absolute;
+		left: 0;
+		top: -25vh;
+		width: 45vw;
+		z-index: 1000;
+	}
+	.crown-1 {
+		display: none;
+	}
+	.gamekid {
+		position: absolute;
+		right: 12vw;
+		top: -45vh;
+		width: 50vw;
+		z-index: 1000;
+	}
+
+	.sword {
+		display: none;
+	}
+	.hand {
+		display: none;
+	}
+	.ball {
+		position: absolute;
+		right: 5vw;
+		top: -150vh;
+		width: 50vw;
+		height: 50vw;
+		z-index: 1000;
+		.ball-fill {
+			background-attachment: fixed;
+			background-size: 35vw;
+			position: absolute;
+			border-radius: 50%;
+			top: 11%;
+			z-index: -1;
+			left: 19%;
+			right: 15%;
+			bottom: 25%;
+			background-image: url(/img/star_background.0e568b9c.svg);
+		}
+		> img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
 	.starmap {
 		overflow: hidden;
+		background: url("../assets/starmap/starmap_tall_bg.svg");
+		background-attachment: fixed;
+		background-size: cover;
+		.container {
+			padding-bottom: 0;
+		}
+		.starmap-clouds {
+			position: absolute;
+			right: 0;
+			bottom: -2px;
+			width: 200%;
+		}
 		.starmap-grid {
-			grid-template-columns: 0;
 			grid-template-areas: "t";
 			grid-template-columns: 100vw;
-			grid-template-rows: 25vh 25vh 50vh 25vh 50vh 25vh 50vh;
+			grid-template-rows: 50vh 50vh 0vh 50vh 50vh 50vh 50vh 0 0vh 100vh 50vh 115vh 0vh;
 			.date {
 				font-size: 50px;
 			}
@@ -282,21 +401,138 @@ export default {
 	}
 }
 .small-horizontal-display {
-	.starmap {
-		.starmap-grid {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
 }
 .med-display {
 	.starmap {
+		.empty {
+			display: none;
+		}
+		.rocket-figure {
+			top: -50vh;
+			left: -50vw;
+			position: absolute;
+			width: 120vw;
+			z-index: 1000;
+		}
+		.moon-figure {
+			position: absolute;
+			top: -80vh;
+			width: 100vw;
+			left: 0;
+			filter: drop-shadow(0 0 25px yellow) saturate(0.5);
+		}
+		.computer {
+			position: absolute;
+			width: 80vw;
+			top: -70vh;
+			right: 0vh;
+			z-index: 10;
+		}
+		.floppy-0 {
+			position: absolute;
+			top: -20vh;
+			width: 30vw;
+			left: 15vw;
+			z-index: 10;
+		}
+		.floppy-1 {
+			display: none;
+		}
+
+		.medallion {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 35vw;
+			z-index: 1000;
+		}
+		.crown-0 {
+			position: absolute;
+			left: 0;
+			top: -40vh;
+			width: 45vw;
+			z-index: 1000;
+		}
+		.crown-1 {
+			position: absolute;
+			right: -25vw;
+			top: -35vh;
+			width: 35vw;
+			z-index: 1000;
+		}
+		.gamekid {
+			position: absolute;
+			right: -30vw;
+			top: -70vh;
+			width: 50vw;
+			z-index: 1000;
+		}
+
+		.sword {
+			display: none;
+		}
+		.hand {
+			position: absolute;
+			left: 0;
+			top: -25vh;
+			width: 40vw;
+			z-index: 1000;
+		}
+		.ball {
+			position: absolute;
+			right: -10vw;
+			top: -15vh;
+			width: 50vw;
+			height: 50vw;
+			z-index: 1000;
+			.ball-fill {
+				background-attachment: fixed;
+				background-size: 35vw;
+				position: absolute;
+				border-radius: 50%;
+				top: 11%;
+				z-index: -1;
+				left: 19%;
+				right: 15%;
+				bottom: 25%;
+				background-image: url(/img/star_background.0e568b9c.svg);
+			}
+			> img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.container {
+			padding: 0;
+		}
+		.starmap-clouds {
+			position: absolute;
+			bottom: -1px;
+			left: -50vw;
+			right: 0;
+			margin: 0;
+			transform: scale(-1, 1);
+		}
 		.starmap-grid {
 			grid-template-columns: calc(50vw - 60px) calc(50vw - 60px);
-			.a,
-			.b,
-			.c,
-			.d {
-				margin: 0 -60px;
+			grid-template-rows: 75vh 50vh 50vh 50vh 50vh 50vh 75vh 50vh 100vh;
+			grid-template-areas: "t t";
+
+			.a.date-section {
+				margin-right: -50vw;
+				margin-bottom: -30px;
+			}
+			.b.date-section {
+				margin-left: -50vw;
+				margin-bottom: -30px;
+			}
+			.c {
+				margin: 0 -15vw 0 -60px;
+				padding: 50px 30px 0 30px;
+			}
+			.d.description {
+				margin: 0 -60px 0 -15vw;
+				padding: 50px 30px 0 30px;
 			}
 		}
 	}
@@ -307,7 +543,7 @@ export default {
 		position: absolute;
 		right: 0;
 		top: 15vh;
-		width: 65vw;
+		width: 55vw;
 		z-index: 1000;
 	}
 	.moon-figure {
@@ -374,6 +610,37 @@ export default {
 		width: 30vw;
 		z-index: 1000;
 	}
+	.hand {
+		position: absolute;
+		left: 15vw;
+		top: 75vh;
+		width: 15vw;
+		z-index: 1000;
+	}
+	.ball {
+		position: absolute;
+		left: 5vw;
+		top: 20vh;
+		width: 20vw;
+		height: 20vw;
+		z-index: 1000;
+		.ball-fill {
+			background-attachment: fixed;
+			background-size: 10vw;
+			position: absolute;
+			border-radius: 50%;
+			top: 11%;
+			z-index: -1;
+			left: 19%;
+			right: 15%;
+			bottom: 25%;
+			background-image: url("../assets/starmap/star_background.svg");
+		}
+		> img {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
 	.starmap {
 		.starmap-clouds {
@@ -424,7 +691,7 @@ export default {
 }
 .starmap {
 	position: relative;
-	background: url("../assets/starmap_bg.svg");
+	background: url("../assets/starmap/starmap_bg.svg");
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: hidden;
@@ -437,6 +704,7 @@ export default {
 			justify-content: flex-end;
 			align-items: stretch;
 			flex-direction: column;
+			z-index: 1;
 		}
 		.a {
 			justify-content: flex-end;

@@ -1,8 +1,65 @@
 <template>
-	<router-view />
+	<transition name="fade" appear>
+		<loader-animation v-if="!loaded"></loader-animation>
+	</transition>
+	<router-view v-if="started" :class="{ 'not-loaded': !loaded }" />
 </template>
-
+<script>
+import LoaderAnimation from /*webpackPrefetch: true*/ "../src/components/LoaderAnimation.vue";
+export default {
+	data() {
+		return {
+			loaded: false,
+			started: false,
+			initialSetup: false,
+		};
+	},
+	mounted() {
+		this.started = true;
+		var self = this;
+		self.started = true;
+		console.log("started");
+		window.addEventListener("load", () => {
+			self.loaded = true;
+			console.log("loaded");
+		});
+	},
+	components: {
+		LoaderAnimation,
+	},
+	beforeMount() {
+		this.initialSetup = true;
+	},
+};
+</script>
 <style lang="scss">
+@font-face {
+	font-family: "rubik-light";
+	src: url("./assets/fonts/rubik-light.woff2") format("woff2"),
+		url("./assets/fonts/rubik-light.woff") format("woff");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "rubik-regular";
+	src: url("./assets/fonts/rubik-regular.woff2") format("woff2"),
+		url("./assets/fonts/rubik-regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "rubik";
+	src: url("./assets/fonts/rubik-bold.woff2") format("woff2"),
+		url("./assets/fonts/rubik-bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+.not-loaded {
+	overflow: hidden;
+}
 section {
 	position: relative;
 	display: flex;
@@ -19,7 +76,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	padding: 50px 0;
+	padding: 15vh 0;
 	> * {
 		position: relative;
 		display: flex;
@@ -63,35 +120,42 @@ section {
 .orange {
 	color: rgb(255, 127, 81);
 	font-weight: normal;
+	// font-family: "rubik-regular";
+
 	// filter: drop-shadow(1px 1px 0px red) drop-shadow(-1px -1px 0px blue);
 }
 .epic {
 	color: violet;
 	font-weight: normal;
+	font-family: "rubik-regular";
+
 	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
 }
 .gold {
 	color: gold;
 	font-weight: normal;
+	font-family: "rubik-regular";
+
 	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
 }
 .important {
 	color: white;
 	font-weight: normal;
+	font-family: "rubik-regular";
 	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
 }
 .date {
 	background: #ffdd7d;
 	padding: 0 20px;
+	// font-family: "rubik-regular";
 }
 .important-data {
 	background: #ffdd7d;
 	padding: 0 20px;
 	font-size: 50px;
+	// font-family: "rubik-regular";
 }
-.important h3 {
-	font-weight: bold;
-}
+
 .purple {
 	color: #704fbf;
 }
@@ -111,15 +175,13 @@ section {
 	}
 	h2 {
 		text-align: left;
-		font-weight: bolder;
 		font-size: 100px;
 		padding: 60px 0 0;
 	}
 	h3 {
 		text-align: left;
-		font-size: 35px;
+		font-size: 40px;
 		padding: 30px 0 0 0;
-		font-weight: normal;
 	}
 
 	p {
@@ -135,7 +197,6 @@ section {
 	}
 	h2 {
 		text-align: left;
-		font-weight: bolder;
 		font-size: 80px;
 		padding: 50px 0 0 0;
 	}
@@ -157,7 +218,6 @@ section {
 	}
 	h2 {
 		text-align: left;
-		font-weight: bolder;
 		font-size: 70px;
 		padding: 0;
 	}
@@ -182,7 +242,6 @@ section {
 	}
 	h2 {
 		text-align: left;
-		font-weight: bolder;
 		font-size: 50px;
 		padding: 0 30px 0 30px;
 	}
@@ -201,7 +260,8 @@ section {
 }
 h2 {
 	text-align: left;
-	font-weight: bolder;
+	font-weight: bold;
+	// font-family: ;
 	font-size: 100px;
 	padding: 30px 30px 0 30px;
 }
@@ -209,12 +269,15 @@ h3 {
 	text-align: left;
 	font-size: x-large;
 	padding: 0 0 0 30px;
+	font-weight: normal;
+	font-family: "rubik-regular";
 }
 p {
 	text-align: justify;
 	font-size: 20px;
 	padding: 40px 30px 0 30px;
 	font-weight: lighter;
+	font-family: "rubik-light";
 }
 html {
 	scroll-behavior: smooth;
@@ -240,7 +303,7 @@ p {
 	color: darkgray;
 }
 #app {
-	font-family: Yu Gothic UI;
+	font-family: rubik;
 	// font-family: Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
