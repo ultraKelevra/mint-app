@@ -26,7 +26,7 @@
 						providing them with <span class="gold">perks</span> in
 						coming projects and events.
 					</p>
-
+					<h2>DO YOU PLAY TO EARN?</h2>
 					<p>
 						<span class="important">The first project</span> is a
 						<span class="epic">"play to earn" videogame</span> and
@@ -105,7 +105,7 @@ export default {
 				text-align: left;
 				font-weight: bolder;
 				font-size: 40px;
-				padding: 0;
+				padding: 20px 0 0 0;
 			}
 			h3 {
 				text-align: left;

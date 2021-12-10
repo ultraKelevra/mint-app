@@ -223,7 +223,7 @@ section {
 	}
 	h3 {
 		text-align: left;
-		font-size: 20px;
+		font-size: 25px;
 		padding: 20px 0 5px 0;
 	}
 
@@ -243,7 +243,7 @@ section {
 	h2 {
 		text-align: left;
 		font-size: 50px;
-		padding: 0 30px 0 30px;
+		padding: 30px 30px 15px 30px !important;
 	}
 	h3 {
 		text-align: left;

@@ -380,7 +380,7 @@ export default {
 		.starmap-grid {
 			grid-template-areas: "t";
 			grid-template-columns: 100vw;
-			grid-template-rows: 50vh 50vh 0vh 50vh 50vh 50vh 50vh 0 0vh 100vh 50vh 115vh 0vh;
+			grid-template-rows: 50vh 50vh 0vh auto 50vh auto 50vh 0 0vh auto 50vh auto 0vh;
 			.date {
 				font-size: 50px;
 			}
@@ -397,10 +397,167 @@ export default {
 			.b {
 				transform: translate(30px, 30px);
 			}
+			> *:nth-last-child(2) {
+				padding-bottom: 33vh;
+			}
 		}
 	}
 }
 .small-horizontal-display {
+	.important-data {
+		font-size: 35px;
+	}
+	.rocket-figure {
+		position: absolute;
+		right: 0;
+		top: 15vh;
+		width: 55vw;
+		z-index: 1000;
+	}
+	.moon-figure {
+		position: absolute;
+		top: -100vh;
+		width: 100vw;
+		right: -50vw;
+		filter: drop-shadow(0 0 25px yellow) saturate(0.5);
+	}
+	.computer {
+		position: absolute;
+		bottom: -15vh;
+		width: 25vw;
+		left: -7vh;
+	}
+	.floppy-0 {
+		position: absolute;
+		bottom: 25vh;
+		width: 10vw;
+		left: 0;
+	}
+	.floppy-1 {
+		position: absolute;
+		bottom: -25vh;
+		width: 18vw;
+		left: 20vh;
+		filter: blur(3px);
+		z-index: 5;
+	}
+
+	.medallion {
+		position: absolute;
+		right: 15vw;
+		top: 35vh;
+		width: 15vw;
+		z-index: 1000;
+	}
+	.crown-0 {
+		position: absolute;
+		right: 0;
+		top: 45vh;
+		width: 15vw;
+		z-index: 1000;
+	}
+	.crown-1 {
+		position: absolute;
+		right: 5vw;
+		top: 75vh;
+		width: 10vw;
+		z-index: 1000;
+	}
+	.gamekid {
+		position: absolute;
+		right: 12vw;
+		top: 65vh;
+		width: 17vw;
+		z-index: 1000;
+	}
+
+	.sword {
+		position: absolute;
+		right: -45px;
+		top: 10vh;
+		width: 30vw;
+		z-index: 1000;
+	}
+	.hand {
+		position: absolute;
+		left: 15vw;
+		top: 75vh;
+		width: 15vw;
+		z-index: 1000;
+	}
+	.ball {
+		position: absolute;
+		left: 5vw;
+		top: 20vh;
+		width: 20vw;
+		height: 20vw;
+		z-index: 1000;
+		.ball-fill {
+			background-attachment: fixed;
+			background-size: 10vw;
+			position: absolute;
+			border-radius: 50%;
+			top: 11%;
+			z-index: -1;
+			left: 19%;
+			right: 15%;
+			bottom: 25%;
+			background-image: url("../assets/starmap/star_background.svg");
+		}
+		> img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.starmap {
+		.starmap-clouds {
+			position: absolute;
+			width: 100vw;
+			left: 0;
+			bottom: -2px;
+			margin: 0;
+		}
+		.container {
+			padding-bottom: 50vh;
+		}
+		.starmap-grid {
+			grid-template-columns: calc(50vw - 80px) calc(50vw - 80px);
+			grid-template-areas: "t t";
+			grid-template-rows: 75vh 45vh auto 45vh auto 45vh auto 45vh auto;
+			h2 {
+				margin: 0;
+				padding: 0;
+			}
+			> * {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+			}
+			.t {
+				align-items: stretch;
+				padding: 0 80px;
+			}
+			.a {
+				transform: translate(150px, 30px);
+				font-weight: bold;
+				z-index: 5;
+			}
+			.b {
+				transform: translate(-150px, 30px);
+				font-weight: bold !important;
+			}
+			.c {
+				padding: 50px 20px;
+				h3 {
+					text-align: rigth;
+				}
+			}
+			.d {
+				padding: 50px 20px;
+			}
+		}
+	}
 }
 .med-display {
 	.starmap {
@@ -515,7 +672,7 @@ export default {
 		}
 		.starmap-grid {
 			grid-template-columns: calc(50vw - 60px) calc(50vw - 60px);
-			grid-template-rows: 75vh 50vh 50vh 50vh 50vh 50vh 75vh 50vh 100vh;
+			grid-template-rows: 75vh 50vh auto 50vh auto 50vh auto 50vh auto;
 			grid-template-areas: "t t";
 
 			.a.date-section {
@@ -526,13 +683,16 @@ export default {
 				margin-left: -50vw;
 				margin-bottom: -30px;
 			}
-			.c {
+			.c.description {
 				margin: 0 -15vw 0 -60px;
-				padding: 50px 30px 0 30px;
+				padding: 50px 30px 30px 30px;
 			}
 			.d.description {
 				margin: 0 -60px 0 -15vw;
-				padding: 50px 30px 0 30px;
+				padding: 50px 30px 30px 30px;
+			}
+			> *:nth-last-child(2) {
+				padding-bottom: 33vh !important;
 			}
 		}
 	}
@@ -655,7 +815,7 @@ export default {
 		.starmap-grid {
 			grid-template-columns: 400px 400px;
 			grid-template-areas: "t t";
-			grid-template-rows: 75vh 25vh 60vh 25vh 60vh 25vh 100vh;
+			grid-template-rows: 75vh 25vh auto 25vh auto 25vh auto 25vh auto;
 			h2 {
 				margin: 0;
 				padding: 0;
