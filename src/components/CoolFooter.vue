@@ -5,7 +5,7 @@
 				<div class="discord"></div>
 				<div class="twitter"></div>
 				<div class="inner-navigation">
-					<a href="#mint" style="font-weight: bold; color: gold"
+					<a href="#home" style="font-weight: bold; color: gold"
 						>MINT</a
 					>
 					<a href="#about">About</a>

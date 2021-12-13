@@ -24,10 +24,32 @@
 					<a href="#starmap">STARMAP</a> section) And additional perks
 					will come to the holders as our future plans develop and our
 					STARMAP grows. Additionally, the projects and events will be
-					discussed in a
+					discussed in
 					<span class="important">patreons-only chats</span> in our
-					Discord Server. Kids holders will gain access to this chat.
+					Discord Server.
+					<span class="important"
+						><span class="epic">Hoodie Kidz holders</span> will gain
+						access to this chats</span
+					>.
 				</p>
+				<h3>What can you tell me about The Game?</h3>
+				<p>
+					The game is planned to be a
+					<span class="important">"play to earn"</span>
+					experience where every (or at least the vast mayority) of
+					<span class="important"
+						>in-game asset are an ownable NFT</span
+					>.<br />Some items and currencies would have to stay locked
+					in the game for a time period, but our intention is to
+					maintain the ownership of most game resources with their
+					respective players.<br /><br />
+					(<span class="epic">Hoodie Kidz holders</span>
+					will have access to a
+					<span class="important">special room</span> in our discord
+					for discussing financial and technical topics relative to
+					The Game and future projects) <br /><br />
+				</p>
+
 				<h3>
 					Do I get more <span class="gold">PERKS</span> having
 					<span class="epic">RARER Hoodie Kidz</span>?
@@ -55,7 +77,7 @@
 						>There will be no "substantial" rewards coming from
 						<span class="important">The Team</span> to holders of
 						<span class="epic">"rarer"</span> kidz</span
-					><br />
+					>.
 				</p>
 			</div>
 		</div>

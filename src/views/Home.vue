@@ -1,6 +1,7 @@
 <template>
 	<div
 		class="home"
+		id="home"
 		:class="{
 			horizontal: horizontal,
 			vertical: !horizontal,
@@ -12,7 +13,7 @@
 	>
 		<navigation></navigation>
 		<hero></hero>
-		<mint-button></mint-button>
+		<mint-area></mint-area>
 		<kidz-band></kidz-band>
 
 		<starmap id="starmap"></starmap>
@@ -25,7 +26,7 @@
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 import Hero from "../components/Hero.vue";
-import MintButton from "../components/MintButton.vue";
+import MintArea from "../components/MintArea.vue";
 import FAQ from "../components/FAQ.vue";
 
 import KidzBand from "../components/KidzBand.vue";
@@ -42,7 +43,7 @@ export default {
 	},
 	components: {
 		Hero,
-		MintButton,
+		MintArea,
 		KidzBand,
 		FAQ,
 

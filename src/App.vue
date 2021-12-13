@@ -131,6 +131,16 @@ section {
 
 	// filter: drop-shadow(1px 1px 3px red) drop-shadow(-1px -1px 3px blue);
 }
+h3 {
+	.gold {
+		font-weight: bold;
+		font-family: "rubik";
+	}
+	.epic {
+		font-weight: bold;
+		font-family: "rubik";
+	}
+}
 .gold {
 	color: gold;
 	font-weight: normal;
@@ -180,7 +190,7 @@ section {
 	}
 	h3 {
 		text-align: left;
-		font-size: 40px;
+		font-size: 50px;
 		padding: 30px 0 0 0;
 	}
 
@@ -270,7 +280,7 @@ h3 {
 	font-size: x-large;
 	padding: 0 0 0 30px;
 	font-weight: normal;
-	font-family: "rubik-regular";
+	font-family: "rubik";
 }
 p {
 	text-align: justify;

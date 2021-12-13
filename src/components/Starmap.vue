@@ -36,11 +36,11 @@
 					/>
 				</div>
 				<div class="d description">
-					<h3>Minting is open</h3>
+					<h3>Open Minting</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam.
+						Starting in early January of 2022 the Hoodie Kidz
+						contract will be set "unpaused" and the minting will
+						open.
 					</p>
 				</div>
 				<div class="a empty"></div>
@@ -49,11 +49,19 @@
 					<span class="date purple">2022/FEB </span>
 				</div>
 				<div class="c description">
-					<h3>Move to an office</h3>
+					<h3>Prepare things up</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam.
+						Once we reach 50% minting
+						<span class="important">The Team</span> will start
+						making the visual part of
+						<span class="important">The Game</span><br /><br />
+						Our main objectives are simple for this month:<br /><br /><br />
+						<span class="important">- Step 1</span>: Hire a couple
+						minions to help with the overwhelming work of making the
+						next blockchain hit.<br /><br />
+						<span class="important">- Step 2</span>: Lead our
+						minions through a successful videogame development.<br /><br />
+						<span class="important">- Step 3</span>: Profit.
 					</p>
 				</div>
 				<div class="d">
@@ -114,15 +122,42 @@
 						alt=""
 					/>
 				</div>
-				<div class="d important-description description">
-					<h3>Release Beta of "Staff of Mana" (Play to earn game)</h3>
-					<p class="important">
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam. Lorem
-						ipsum dolor sit amet, consectetur adipisicing elit, sed
-						do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam.
+				<div class="d description">
+					<h3>Release Schedule</h3>
+					<p>
+						- Start <span class="important">test servers</span> and
+						deploy "official"
+						<span class="important">testnet contracts</span
+						>.<br /><br />
+						- Release
+						<span class="important">ALPHA version</span> in
+						testnet.<br />
+						Testers can apply to get in the
+						<span class="important">ALPHA</span> stage of the game
+						(<span class="important"
+							><span class="epic">Hoodie Kidz holders</span> will
+							be prioritized</span
+						>)<br /><br />
+						- Transition smoothly to
+						<span class="important">BETA phase</span>.
+						<span class="orange">
+							BETA Testers can get
+							<span class="gold">GOLDEN</span>
+							items during this phase and those items will be
+							present in the released version for every
+							owner.</span
+						>
+						<br />
+						<br />
+
+						- Get a serious marketing team.<br />
+						<br />
+
+						- Release a webpage and a presale (<span class="epic"
+							>Hoodie Kidz holders will be prioritized in the
+							presale and receive free exclusive
+							<span class="gold">perks</span></span
+						>)
 					</p>
 				</div>
 				<div class="a empty"></div>
@@ -296,13 +331,13 @@ export default {
 	.computer {
 		position: absolute;
 		width: 80vw;
-		top: -100vh;
+		top: -160vh;
 		right: 0vh;
 		z-index: 10;
 	}
 	.floppy-0 {
 		position: absolute;
-		top: -100vh;
+		top: -140vh;
 		width: 30vw;
 		left: 0;
 		z-index: 10;
@@ -364,10 +399,6 @@ export default {
 	}
 
 	.starmap {
-		overflow: hidden;
-		background: url("../assets/starmap/starmap_tall_bg.svg");
-		background-attachment: fixed;
-		background-size: cover;
 		.container {
 			padding-bottom: 0;
 		}
@@ -703,15 +734,19 @@ export default {
 		position: absolute;
 		right: 0;
 		top: 15vh;
-		width: 55vw;
+		width: 50vw;
 		z-index: 1000;
 	}
 	.moon-figure {
 		position: absolute;
-		top: -25vh;
-		width: 100vw;
+		top: -80vh;
+		width: 50vw;
 		right: -50vw;
 		filter: drop-shadow(0 0 25px yellow) saturate(0.5);
+		&.stars {
+			top: -90vh;
+			width: 100vw;
+		}
 	}
 	.computer {
 		position: absolute;
@@ -838,13 +873,21 @@ export default {
 				font-weight: bold !important;
 			}
 			.c {
-				padding: 50px 20px;
+				padding: 50px 30px;
 				h3 {
 					text-align: rigth;
 				}
+				&.description {
+					margin-right: -5vw;
+				}
+				margin-right: 5vw;
 			}
 			.d {
-				padding: 50px 20px;
+				padding: 50px 30px;
+				&.description {
+					margin-left: -5vw;
+				}
+				margin-left: 5vw;
 			}
 		}
 	}
@@ -855,6 +898,7 @@ export default {
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: hidden;
+
 	.starmap-grid {
 		display: grid;
 
