@@ -200,6 +200,12 @@ h3 {
 		font-size: 30px;
 		padding: 10px 0;
 	}
+	label {
+		// line-height: calc(50px + 0.5vw);
+		// text-align: justify;
+		font-size: 30px;
+		padding: 10px 0;
+	}
 }
 .med-display {
 	.date {
@@ -221,6 +227,11 @@ h3 {
 		font-size: calc(25px + 0.5vw);
 		padding: 10px 0;
 	}
+	label {
+		// text-align: justify;
+		font-size: calc(25px + 0.5vw);
+		padding: 10px 0;
+	}
 }
 .small-horizontal-display {
 	.date {
@@ -239,6 +250,11 @@ h3 {
 
 	p {
 		text-align: justify;
+		font-size: calc(20px+0.5vw);
+		padding: 10px 0;
+	}
+	label {
+		// text-align: justify;
 		font-size: calc(20px+0.5vw);
 		padding: 10px 0;
 	}
@@ -265,7 +281,13 @@ h3 {
 		text-align: justify;
 		font-size: calc(20px + 0.2vw);
 		padding: 10px 30px;
-		line-height: calc(30px + 0.2vw);
+		// line-height: calc(30px + 0.2vw);
+	}
+	label {
+		// text-align: justify;
+		font-size: calc(20px + 0.2vw);
+		padding: 10px 30px;
+		// line-height: calc(30px + 0.2vw);
 	}
 }
 h2 {
@@ -287,6 +309,22 @@ p {
 	font-size: 20px;
 	padding: 40px 30px 0 30px;
 	font-weight: lighter;
+	font-family: "rubik-light";
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+label {
+	text-align: start;
+	font-size: 20px;
+	// padding: 40px 30px 0 30px;
+	font-weight: normal;
 	font-family: "rubik-light";
 }
 html {
