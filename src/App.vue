@@ -191,20 +191,20 @@ h3 {
 	h3 {
 		text-align: left;
 		font-size: 50px;
-		padding: 30px 0 0 0;
+		padding: 50px 0 15px 0;
 	}
 
 	p {
 		// line-height: calc(50px + 0.5vw);
 		text-align: justify;
 		font-size: 30px;
-		padding: 10px 0;
+		padding: 35px 0;
 	}
 	label {
 		// line-height: calc(50px + 0.5vw);
 		// text-align: justify;
 		font-size: 30px;
-		padding: 10px 0;
+		padding: 15px 0;
 	}
 }
 .med-display {
@@ -219,7 +219,8 @@ h3 {
 	h3 {
 		text-align: left;
 		font-size: calc(30px + 0.5vh);
-		padding: 15px 0 0 0;
+		// padding: 15px 0 0 0;
+		padding: 30px 0 15px 0;
 	}
 
 	p {
@@ -228,7 +229,7 @@ h3 {
 		padding: 10px 0;
 	}
 	label {
-		// text-align: justify;
+		text-align: start;
 		font-size: calc(25px + 0.5vw);
 		padding: 10px 0;
 	}
@@ -245,7 +246,7 @@ h3 {
 	h3 {
 		text-align: left;
 		font-size: 25px;
-		padding: 20px 0 5px 0;
+		// padding: 20px 0 5px 0;
 	}
 
 	p {
@@ -274,7 +275,11 @@ h3 {
 	h3 {
 		text-align: left;
 		font-size: 25px;
-		padding: 30px 30px 0 30px;
+		margin-left: 30px;
+		margin-right: 30px;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 15px;
 	}
 
 	p {
@@ -300,9 +305,11 @@ h2 {
 h3 {
 	text-align: left;
 	font-size: x-large;
-	padding: 0 0 0 30px;
+	// padding: 0 0 0 30px;
 	font-weight: normal;
 	font-family: "rubik";
+	padding: 15px 0 30px 0;
+	border-bottom: 1px solid gray;
 }
 p {
 	text-align: justify;

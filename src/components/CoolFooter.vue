@@ -5,7 +5,10 @@
 				<div class="discord"></div>
 				<div class="twitter"></div>
 				<div class="inner-navigation">
-					<a href="#home" style="font-weight: bold; color: gold"
+					<a
+						href="#home"
+						style="font-weight: bold; color: gold"
+						@click="openMintMenu"
 						>MINT</a
 					>
 					<a href="#about">About</a>
@@ -18,7 +21,14 @@
 </template>
 
 <script>
-export default {};
+import eventBus from "../eventBus";
+export default {
+	methods: {
+		openMintMenu() {
+			eventBus.$emit("open-mint-menu");
+		},
+	},
+};
 </script>
 
 <style lang="scss">

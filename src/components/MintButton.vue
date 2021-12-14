@@ -59,7 +59,7 @@
 <script>
 import Web3 from "web3";
 import getProvider from "@metamask/detect-provider";
-
+import eventBus from "../eventBus";
 export default {
 	data() {
 		return {
@@ -78,7 +78,7 @@ export default {
 				connected: false,
 			},
 			kidzData: {
-				gatheredData: true,
+				gatheredData: false,
 				kidzBalance: 0,
 				kidzPerWallet: 10,
 				limited: true,
@@ -88,7 +88,7 @@ export default {
 	computed: {
 		mintButtonDisabled() {
 			return (
-				this.kidzToMint == 0 ||
+				(this.walletData.connected && this.kidzToMint == 0) ||
 				(this.walletData.connected && !this.kidzData.gatheredData)
 			);
 		},
@@ -129,16 +129,17 @@ export default {
 	},
 	methods: {
 		kidsToMintButtonActionUp() {
+			if (this.mintAmountDisabled) return;
 			this.kidzToMint++;
 			this.checkKidzAmount();
 		},
 		kidsToMintButtonActionDown() {
+			if (this.mintAmountDisabled) return;
 			this.kidzToMint--;
 			this.checkKidzAmount();
 		},
 		closeMenu() {
 			if (!this.interactable) return;
-			this.displayMintMenu = false;
 			this.reset();
 		},
 		checkKidzAmount() {
@@ -154,7 +155,7 @@ export default {
 
 		mint() {
 			if (!this.interactable) return;
-
+			if (!this.kidzToMint > 0) return;
 			console.log("minting: " + this.kidzToMint + " kidz");
 		},
 		reset() {
@@ -163,14 +164,15 @@ export default {
 			this.walletData.rejectedConnection = false;
 			this.kidzData.gatheredData = false;
 			this.walletData.availableProvider = false;
+			this.displayMintMenu = false;
 		},
 		connectButton() {
 			if (!this.interactable) return;
 
-			if (this.kidzToMint <= 0) return;
 			if (this.walletData.connected) {
 				this.mint();
 			} else {
+				this.displayMintMenu = true;
 				this.connect();
 			}
 		},
@@ -226,29 +228,60 @@ export default {
 			);
 		},
 	},
+	mounted() {
+		var self = this;
+		eventBus.$on("open-mint-menu", () => {
+			self.displayMintMenu = true;
+		});
+	},
+	beforeUnmount() {
+		eventBus.$off("open-mint-menu");
+	},
 };
 </script>
 
 <style lang="scss">
-.mint-screen-container.deployed {
-	height: 85vh;
-}
-.mint-screen-container:not(.deployed) {
-	height: 100%;
-}
-.mint-menu-enter-active {
-}
-.mint-menu-leave-active {
-}
-.small-display .mint-screen-container {
-}
-.small-horizontal-display .mint-screen-container {
+.large-display {
+	.mint-screen-container {
+		width: 100%;
+		bottom: 0;
+		right: 0;
+		padding: 0;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-rows: 50px 1fr 1fr 20vh;
+		grid-template-areas:
+			"t"
+			"a"
+			"b";
+		p {
+			padding-top: 50px !important;
+		}
+		.minting-form {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			align-items: stretch;
+			grid-area: b;
+			input {
+				height: 80px;
+				font-size: 40px;
+				padding: 0 40px;
+			}
+		}
+		&.deployed {
+			height: 80vh;
+			opacity: 1;
+		}
+		&:not(.deployed) {
+			overflow: hidden;
+			height: 20vh;
+		}
+	}
 }
 .med-display .mint-screen-container {
-}
-
-.large-display .mint-screen-container {
-	height: 80vh;
+	// height: 80vh;
 	width: 100%;
 	bottom: 0;
 	right: 0;
@@ -256,35 +289,145 @@ export default {
 	align-items: center;
 	grid-template-columns: 1fr;
 	grid-template-rows: 50px 1fr 1fr 20vh;
+	grid-template-areas:
+		"t"
+		"a"
+		"b";
 	p {
 		padding-top: 50px !important;
 	}
 	.minting-form {
-		display: flex;
-		flex-direction: column;
-		align-content: center;
-		justify-content: center;
-		align-items: stretch;
 		input {
 			height: 80px;
 			font-size: 40px;
 			padding: 0 40px;
 		}
 	}
+	.mint-screen-background {
+		left: -15px;
+		right: -15px;
+		bottom: -15px;
+		top: -15px;
+	}
+
+	&.deployed {
+		height: 80vh;
+		opacity: 1;
+	}
+	&:not(.deployed) {
+		overflow: hidden;
+		height: 20vh;
+		width: calc((100vw - 160px) / 2);
+	}
 }
-.deployed {
+
+.small-horizontal-display {
 	.minting-screen {
-		button {
-			.graphics-container {
+		.mint-screen-container {
+			bottom: 0;
+			right: 0;
+			padding: 0;
+			align-items: center;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"a t"
+				"a b"
+				"a .";
+			grid-template-rows: 50px 1fr 20vh;
+			grid-gap: 0 60px;
+			button {
+				span {
+					font-size: 25px;
+				}
+			}
+			&.deployed {
+				height: 75vh;
+				opacity: 1;
+				width: calc(100vw - 160px);
+				.mint-screen-background {
+					left: -10px;
+					right: -10px;
+					bottom: -10px;
+					top: -10px;
+				}
+			}
+			&:not(.deployed) {
+				height: 20vh;
+				width: 100%;
+			}
+
+			.minting-form {
+				input {
+					height: 60px;
+					font-size: 30px;
+					padding: 0 30px;
+				}
+				.number-input-up,
+				.number-input-down {
+					width: 60px;
+					height: 60px;
+					font-size: 43px;
+				}
+				.number-input-up {
+					right: 60px;
+				}
 			}
 		}
 	}
 }
+.small-display {
+	.mint-screen-container {
+		width: 100%;
+		bottom: 0;
+		right: 0;
+		padding: 0;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-rows: 50px 1fr 1fr 20vh;
+		grid-template-areas:
+			"t"
+			"a"
+			"b";
+		p {
+			padding: 0 !important;
+		}
+		.minting-form {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			align-items: stretch;
+			grid-area: b;
+			input {
+				height: 80px;
+				font-size: 40px;
+				padding: 0 40px;
+			}
+			.number-input-down,
+			.number-input-up {
+				font-size: 60px;
+			}
+		}
+		&.deployed {
+			height: 80vh;
+			opacity: 1;
+		}
+		&:not(.deployed) {
+			overflow: hidden;
+			height: 15vh;
+		}
+	}
+}
+
 .minting-screen {
 	label {
 		&.disabled {
 			color: gray;
 		}
+	}
+	form {
+		display: flex;
+		flex-direction: column;
 	}
 	input {
 		background: #4a356b;
@@ -312,6 +455,7 @@ export default {
 		}
 	}
 	.input-container {
+		grid-area: b;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -360,7 +504,7 @@ export default {
 	}
 	.cross-icon {
 		cursor: pointer;
-
+		grid-area: t;
 		margin-top: 15px;
 		right: 0;
 		width: 35px;
@@ -372,19 +516,16 @@ export default {
 		background-origin: 50% 50%;
 		background-image: url("../assets/icons/cross.svg");
 		justify-self: flex-end;
-		transition: 0.15s;
-		transform: scale(1);
-
-		&:hover {
-			transform: scale(0.8);
-		}
 	}
 	.mint-screen-container {
 		position: absolute;
 		z-index: -1;
 		display: grid;
 		box-sizing: border-box;
-
+		transition: height 0.5s, width 0.5s, opacity 0.75s;
+		p {
+			grid-area: a;
+		}
 		.mint-screen-background {
 			background: black;
 			border: 1px solid gold;
@@ -396,6 +537,28 @@ export default {
 			top: -15px;
 			box-sizing: border-box;
 			z-index: -1;
+			transition: 0.15s 0.25s;
+		}
+		> * {
+			transition: opacity 0.15s;
+		}
+		&.deployed {
+			opacity: 1;
+		}
+		&:not(.deployed) {
+			overflow: hidden;
+
+			.mint-screen-background {
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: unset;
+				height: unset;
+			}
+			> *:not(.mint-screen-background) {
+				opacity: 0;
+			}
 		}
 	}
 
@@ -422,8 +585,9 @@ export default {
 			top: 50%;
 			transform: translate(-50%, -50%);
 			transition: 0.5s;
-			filter: drop-shadow(0 0 25pxpx rgba(255, 217, 0, 0));
+			filter: drop-shadow(0 0 25px rgba(255, 217, 0, 0));
 			transform-origin: center;
+			width: calc(100% - 60px);
 		}
 		.graphics-container {
 			overflow: hidden;

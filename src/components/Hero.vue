@@ -63,7 +63,7 @@ export default {
 }
 .med-display {
 	.hero {
-		height: 70vh;
+		height: 75vh;
 	}
 	.hero-elements {
 		.hoodie-kidz-text {

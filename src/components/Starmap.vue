@@ -122,7 +122,7 @@
 						alt=""
 					/>
 				</div>
-				<div class="d description">
+				<div class="d description important-description">
 					<h3>Release Schedule</h3>
 					<p>
 						- Start <span class="important">test servers</span> and
@@ -264,6 +264,7 @@ export default {
 					Math.round(lerp(start, end, t) * height) +
 					"px)";
 			};
+
 			parallaxPerElement(self.$refs.rocket, 0.3, -0.3);
 			parallaxPerElement(self.$refs.moon, -0.5, 0.5);
 			parallaxPerElement(self.$refs.stars, -1, 1);
@@ -302,12 +303,8 @@ export default {
 }
 
 .important-description {
-	background-color: rgb(238, 190, 57);
 	h3 {
-		color: rgb(30, 30, 30);
-	}
-	p {
-		color: rgb(30, 30, 30);
+		border-bottom: 1px solid gold;
 	}
 }
 .small-display {
@@ -331,13 +328,13 @@ export default {
 	.computer {
 		position: absolute;
 		width: 80vw;
-		top: -160vh;
+		top: -120vh;
 		right: 0vh;
 		z-index: 10;
 	}
 	.floppy-0 {
 		position: absolute;
-		top: -140vh;
+		top: -110vh;
 		width: 30vw;
 		left: 0;
 		z-index: 10;
@@ -376,7 +373,7 @@ export default {
 	.ball {
 		position: absolute;
 		right: 5vw;
-		top: -150vh;
+		top: -120vh;
 		width: 50vw;
 		height: 50vw;
 		z-index: 1000;
@@ -411,7 +408,8 @@ export default {
 		.starmap-grid {
 			grid-template-areas: "t";
 			grid-template-columns: 100vw;
-			grid-template-rows: 50vh 50vh 0vh auto 50vh auto 50vh 0 0vh auto 50vh auto 0vh;
+			grid-template-rows: 50vh 50vh 0 auto 50vh auto 0 50vh 0vh auto 50vh auto 0vh;
+
 			.date {
 				font-size: 50px;
 			}
@@ -423,13 +421,16 @@ export default {
 				padding: 30px 0 20px 0;
 			}
 			.a {
-				transform: translate(-30px, 30px);
+				transform: translate(-15px, 20px);
 			}
 			.b {
-				transform: translate(30px, 30px);
+				transform: translate(15px, 20px);
 			}
 			> *:nth-last-child(2) {
 				padding-bottom: 33vh;
+			}
+			.description {
+				border-radius: 0;
 			}
 		}
 	}
@@ -612,7 +613,7 @@ export default {
 		.computer {
 			position: absolute;
 			width: 80vw;
-			top: -70vh;
+			top: -65vh;
 			right: 0vh;
 			z-index: 10;
 		}
@@ -629,7 +630,7 @@ export default {
 
 		.medallion {
 			position: absolute;
-			left: 0;
+			left: -5vw;
 			bottom: 0;
 			width: 35vw;
 			z-index: 1000;
@@ -643,14 +644,14 @@ export default {
 		}
 		.crown-1 {
 			position: absolute;
-			right: -25vw;
-			top: -35vh;
-			width: 35vw;
+			left: calc(2vw);
+			bottom: 50vh;
+			width: 30vw;
 			z-index: 1000;
 		}
 		.gamekid {
 			position: absolute;
-			right: -30vw;
+			right: -50vw;
 			top: -70vh;
 			width: 50vw;
 			z-index: 1000;
@@ -936,6 +937,17 @@ export default {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+		}
+		.description {
+			border-radius: 15px;
+		}
+		span.important-data {
+			border-radius: 15px;
+			margin-bottom: -30px;
+			padding-bottom: 30px;
+		}
+		.date {
+			border-radius: 15px;
 		}
 	}
 }

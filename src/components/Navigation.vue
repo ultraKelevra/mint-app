@@ -26,7 +26,10 @@
 					<a href="#about">About</a>
 					<a href="#starmap">Starmap</a>
 					<a href="#faq">FAQ</a>
-					<a href="#mint" style="font-weight: bold; color: gold"
+					<a
+						href="#mint"
+						style="font-weight: bold; color: gold"
+						@click="mint"
 						>MINT</a
 					>
 				</div>
@@ -41,7 +44,11 @@
 				<a href="#about"><span class="purple">About</span></a>
 				<a href="#starmap"><span class="salmon">Starmap</span></a>
 				<a href="#faq"><span class="pink">FAQ</span></a>
-				<a href="#mint" class="" style="font-weight: bold; color: gold"
+				<a
+					href="#home"
+					class=""
+					style="font-weight: bold; color: gold"
+					@click="openMintMenu"
 					><span>MINT</span></a
 				>
 				<a><div class="discord"></div></a>
@@ -52,6 +59,8 @@
 </template>
 
 <script>
+import eventBus from "../eventBus";
+
 export default {
 	data() {
 		return {
@@ -60,6 +69,9 @@ export default {
 		};
 	},
 	methods: {
+		openMintMenu() {
+			eventBus.$emit("open-mint-menu");
+		},
 		reloadPage() {
 			document.location.reload();
 		},
