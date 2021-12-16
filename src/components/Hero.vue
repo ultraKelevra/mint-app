@@ -61,6 +61,7 @@ export default {
 		}
 	}
 }
+
 .med-display {
 	.hero {
 		height: 75vh;
