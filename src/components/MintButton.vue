@@ -108,59 +108,56 @@ export default {
             if (this.walletData.connected) return "MINT";
             return "CONNECT WALLET";
         },
+
         descriptionText() {
             if (this.connecting)
                 return "connecting... check your metamask tab or popup.";
             if (this.walletData.connected) {
-                if (this.kidzData.gatheredData)
-                    if (this.kidzData.limited)
-                        return (
-                            "Your wallet currently has <span class='important'>" +
-                            this.kidzData.kidzBalance +
-                            " kidz </span>. The current limit per wallet is <span class='important'>" +
-                            this.kidzData.kidzPerWallet +
-                            " kidz</span>. You can mint up to <span class='important'>" +
-                            (this.kidzData.kidzPerWallet -
-                                this.kidzData.kidzBalance) +
-                            " kidz</span>.<br />" +
-                            (this.kidzToMint > 0
-                                ? "The price of <span class='important'>" +
-                                  (this.kidzToMint + (this.kidzToMint > 1)
-                                      ? "a kidz"
-                                      : "kid") +
-                                  "</span> is:<br /><span class='gold' style='font-family: rubik'>" +
-                                  Math.round(
-                                      this.walletData.web3.utils.fromWei(
-                                          this.kidzData.kidPrice,
-                                          "ether"
-                                      ) *
-                                          this.kidzToMint *
-                                          100
-                                  ) /
-                                      100 +
-                                  " ether</span>."
-                                : "")
-                        );
-                    else
-                        return (
-                            "There is currently no limit to how many kidz you can mint :D<br />" +
-                            "The price of <span class='important'>" +
-                            (this.kidzToMint + (this.kidzToMint > 1)
-                                ? "kidz"
-                                : "kid") +
-                            "</span> is <span class='gold'>" +
-                            this.walletData.web3.utils.fromWei(
-                                this.kidzData.kidPrice,
-                                "ether"
-                            ) +
-                            " ether</span>."
-                        );
-                else return "Gathering your kid balance information";
+                if (this.kidzData.gatheredData) {
+                    console.log("top description = " + this.topDescription());
+                    return (
+                        this.topDescription() +
+                        "<br />" +
+                        (this.kidzToMint > 0 ? this.priceDescription() : "")
+                    );
+                } else return "Gathering your kid balance information";
             }
             return "Connect your <span class=important>METAMASK</span> wallet to get started :)";
         },
     },
     methods: {
+        topDescription() {
+            return this.kidzData.limited
+                ? "Your wallet currently has <span class='important'>" +
+                      this.kidzData.kidzBalance +
+                      " kidz </span>. The current limit per wallet is <span class='important'>" +
+                      this.kidzData.kidzPerWallet +
+                      " kidz</span>. You can mint up to <span class='important'>" +
+                      (this.kidzData.kidzPerWallet -
+                          this.kidzData.kidzBalance) +
+                      " kidz</span>.<br />"
+                : "There is currently no limit to how many kidz you can mint :D<br />";
+        },
+        priceDescription() {
+            var kidAmount = this.kidzToMint;
+            var price = (
+                Math.round(
+                    this.walletData.web3.utils.fromWei(
+                        this.kidzData.kidPrice,
+                        "ether"
+                    ) *
+                        kidAmount *
+                        100
+                ) / 100
+            ).toString();
+            return (
+                "The price of <span class='important'>" +
+                (kidAmount > 1 ? this.kidzToMint + " kidz" : "a kid") +
+                "</span> is:<br /><span class='gold' style='font-family: rubik'>" +
+                price +
+                " ether</span>."
+            );
+        },
         kidsToMintButtonActionUp() {
             if (this.mintAmountDisabled) return;
             this.kidzToMint++;
@@ -187,9 +184,14 @@ export default {
         },
 
         mint() {
-            if (!this.interactable) return;
+            if (!this.interactable) {
+                return;
+            }
             if (!this.kidzToMint > 0) return;
-            console.log("minting: " + this.kidzToMint + " kidz");
+            this.contractInstance.methods.mint(this.kidzToMint).send({
+                from: this.walletData.address,
+                value: this.kidzData.kidPrice * this.kidzToMint,
+            });
         },
         reset() {
             this.kidzToMint = 1;
@@ -201,10 +203,12 @@ export default {
         },
         connectButton() {
             if (!this.interactable) return;
-
+            console.log("button is interactable");
             if (this.walletData.connected) {
+                console.log("button says minting");
                 this.mint();
             } else {
+                console.log("button is connecting");
                 this.displayMintMenu = true;
                 this.connect();
             }
@@ -219,6 +223,7 @@ export default {
             );
         },
         updateKidData() {
+            this.interactable = false;
             var self = this;
             this.contractInstance.methods
                 .totalSupply()
@@ -232,16 +237,16 @@ export default {
                 .maxTokensPerWallet()
                 .call()
                 .then((n) => {
+                    self.interactable = true;
                     self.kidzData.kidzPerWallet = n;
-                    self.kidzData.limited = true;
-                    if (n == 0) {
-                        self.kidzData.limited = false;
-                    }
+                    console.log("current max kidz per wallet is: " + n);
+                    self.kidzData.limited = n ? true : false;
                 });
             this.contractInstance.methods
                 .price()
                 .call()
                 .then((n) => {
+                    console.log("data gathered");
                     self.kidzData.kidPrice = n;
                     self.kidzData.gatheredData = true;
                 });
@@ -275,6 +280,9 @@ export default {
                             self.connecting = false;
                             self.instantiateContract();
                             self.updateKidData();
+                            console.log("gathering data right now");
+                            // p.on("accountsChanged", () => self.reset());
+                            // p.on("networkChanged", () => self.reset());
                         },
                         () => {
                             self.walletData.rejectedConnection = true;
