@@ -60,7 +60,7 @@
 import Web3 from "web3";
 import getProvider from "@metamask/detect-provider";
 import eventBus from "../eventBus";
-import contract from "../smartContract/smart_contract_interface";
+import contract from "../smartContract/contractData";
 
 export default {
     data() {
@@ -169,7 +169,6 @@ export default {
             this.checkKidzAmount();
         },
         closeMenu() {
-            if (!this.interactable) return;
             this.reset();
         },
         checkKidzAmount() {

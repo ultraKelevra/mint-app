@@ -100,6 +100,7 @@ export default {};
         background-repeat: repeat;
         animation-iteration-count: infinite;
         animation-duration: 10s;
+        animation-timing-function: linear;
         animation-name: "loader-sky-animation";
     }
     @keyframes loader-sky-animation {
@@ -107,7 +108,7 @@ export default {};
             transform: translateY(0);
         }
         to {
-            transform: translateY(-100vw);
+            transform: translateY(-100vh);
         }
     }
 }
