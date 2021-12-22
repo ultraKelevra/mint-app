@@ -12,17 +12,17 @@
                         flex-wrap: wrap;
                     "
                 >
-                    <p>Join the kiulest kidz in all the land of Gooo</p>
+                    <p>Join the coolest kidz in the land of Gooo</p>
                 </div>
                 <mint-button></mint-button>
                 <div style="grid-area: c">
                     <p>
                         By minting a
                         <span class="important">Hoodie Kid</span> you will
-                        become <span class="gold">patreon</span> of a passionate
+                        become <span class="gold">patron</span> of a passionate
                         creative team ready to give it all in the future of the
                         blockchain. <span class="important">The team</span> will
-                        then reward <span class="gold">patreons</span> by
+                        then reward <span class="gold">patrons</span> by
                         providing them with <span class="gold">perks</span> in
                         coming projects and events.
                     </p>

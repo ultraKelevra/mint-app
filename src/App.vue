@@ -92,6 +92,9 @@ section {
 }
 
 .small-display {
+    .small-spuff {
+        display: none;
+    }
     .container {
         > * {
             margin-left: 0;
@@ -196,7 +199,7 @@ h3 {
     p {
         // line-height: calc(50px + 0.5vw);
         text-align: justify;
-        font-size: 30px;
+        font-size: 25px;
         padding: 35px 0;
     }
     label {
@@ -224,7 +227,7 @@ h3 {
 
     p {
         text-align: justify;
-        font-size: calc(25px + 0.5vw);
+        font-size: calc(20px + 0.5vw);
         padding: 10px 0;
     }
     label {

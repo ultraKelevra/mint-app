@@ -25,6 +25,7 @@
                     <div class="twitter"></div>
                     <a href="#about">About</a>
                     <a href="#starmap">Starmap</a>
+                    <a href="#team">Team</a>
                     <a href="#faq">FAQ</a>
                     <a
                         href="#home"
@@ -43,6 +44,7 @@
             >
                 <a href="#about"><span class="purple">About</span></a>
                 <a href="#starmap"><span class="salmon">Starmap</span></a>
+                <a href="#team"><span class="orange">Team</span></a>
                 <a href="#faq"><span class="pink">FAQ</span></a>
                 <a
                     href="#home"
@@ -108,7 +110,7 @@ export default {
 <style lang="scss">
 .med-display {
     .nav-container {
-        grid-gap: 3vh;
+        grid-gap: 2vh;
     }
 }
 .hamburger-display {
@@ -141,6 +143,7 @@ export default {
     background-repeat: no-repeat;
     width: 5vh;
     height: 5vh;
+    min-width: 30px;
 }
 .twitter {
     background-image: url("../assets/twitter-logo-white.svg");
@@ -149,6 +152,7 @@ export default {
     background-repeat: no-repeat;
     width: 5vh;
     height: 5vh;
+    min-width: 35px;
 }
 .navigation {
     width: 100%;
@@ -224,7 +228,7 @@ export default {
     height: 100%;
     align-items: center;
     justify-content: flex-end;
-    grid-gap: 5vh;
+    grid-gap: 3vh;
     flex-direction: row;
 }
 
